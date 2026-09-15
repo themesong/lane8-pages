@@ -1,0 +1,379 @@
+<title>Anni Tovar · Hartford 2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#FCFCFA; --surface:#FFFFFF; --surface-2:#F0EFE9; --ink:#141412; --ink-2:#4A4944; --ink-3:#82817A; --line:#E4E3DC; --grid:#F0EFE9;
+  --brand:#FFE600; --brand-ink:#141412;
+  --accent:#9C7F00; --accent-soft:#FFF7B3; --good:#2E7D4F; --good-soft:#E6F3EA; --warn:#9A6B00; --warn-soft:#FBF1D6; --bad:#C0392B; --bad-soft:#FBE5E2;
+  --z-easy:#2F5FA8; --z-easy-soft:#DCE6F5; --z-mp:#2E7D4F; --z-thr:#C0392B; --z5:#7A1F14;
+  --hero-ink:#F1F0EA; --hero-bg:#141412;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121211; --surface:#1B1B19; --surface-2:#232321; --ink:#F1F0EA; --ink-2:#C4C3BB; --ink-3:#8C8B83; --line:#2C2C29; --grid:#232321;
+    --brand:#FFE600; --brand-ink:#141412;
+    --accent:#E8D200; --accent-soft:#332F0D; --good:#6FCB8E; --good-soft:#17301F; --warn:#E8B93A; --warn-soft:#332A0D; --bad:#F0806F; --bad-soft:#3A1A15;
+    --z-easy:#5B8DE0; --z-easy-soft:#1B2A45; --z-mp:#6FCB8E; --z-thr:#F0806F; --z5:#F7B3A6;
+    --hero-ink:#F1F0EA; --hero-bg:#0E0E0D;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121211; --surface:#1B1B19; --surface-2:#232321; --ink:#F1F0EA; --ink-2:#C4C3BB; --ink-3:#8C8B83; --line:#2C2C29; --grid:#232321;
+    --brand:#FFE600; --brand-ink:#141412;
+    --accent:#E8D200; --accent-soft:#332F0D; --good:#6FCB8E; --good-soft:#17301F; --warn:#E8B93A; --warn-soft:#332A0D; --bad:#F0806F; --bad-soft:#3A1A15;
+    --z-easy:#5B8DE0; --z-easy-soft:#1B2A45; --z-mp:#6FCB8E; --z-thr:#F0806F; --z5:#F7B3A6;
+    --hero-ink:#F1F0EA; --hero-bg:#0E0E0D;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Barlow","Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Impact,sans-serif;text-wrap:balance;margin:0;line-height:1.02}
+h2{font-size:32px;font-weight:600;margin:0 0 14px}
+h3{font-size:20px;font-weight:600;margin:20px 0 8px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+
+/* TOPBAR */
+.topbar{background:var(--brand);color:var(--brand-ink);padding:14px 20px;display:flex;align-items:center;gap:14px;font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.topbar .eight{width:30px;height:30px;border-radius:50%;background:#141412;color:#FFE600;display:grid;place-items:center;font-size:18px;font-weight:800}
+/* HERO */
+.hero{background:var(--hero-bg);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero-in{max-width:980px;margin:0 auto;padding:36px 20px 0;position:relative}
+.hero .eyebrow{color:#B3B2A8}
+.hero-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px}
+.hero h1{font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-.015em;text-transform:uppercase;line-height:.92}
+.hero h1 span{display:block;color:#FFE600}
+.count{display:grid;grid-template-columns:repeat(3,auto);gap:22px;font-variant-numeric:tabular-nums}
+.count div{display:flex;flex-direction:column;align-items:flex-start}
+.count b{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:clamp(38px,6vw,64px);line-height:1}
+.count small{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B3B2A8}
+.hero p.lede{margin:16px 0 0;max-width:60ch;color:#D8D7CF;font-size:16.5px}
+.course{margin:22px -20px 0;position:relative}
+.course svg{display:block;width:100%;height:auto}
+.course .cap{display:block;text-align:right;padding:4px 20px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8C8B83}
+.tip{position:absolute;pointer-events:none;background:#FFE600;color:#141412;font-size:12.5px;line-height:1.35;padding:8px 10px;border-radius:4px;box-shadow:0 4px 18px rgba(0,0,0,.35);opacity:0;transform:translate(-50%,-110%);transition:opacity .12s;max-width:230px;z-index:5;white-space:nowrap}
+.tip b{font-family:"IBM Plex Mono",monospace;font-weight:500;display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4A4944;margin-bottom:2px}
+.tip.on{opacity:1}
+.tip.light{background:var(--surface);color:var(--ink);box-shadow:0 4px 18px rgba(0,0,0,.18);border:1px solid var(--line)}
+.tip.light b{color:var(--ink-2)}
+
+/* BODY */
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:0;overflow:hidden;margin:0 0 30px}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.stat .v{font-family:"Barlow Condensed",sans-serif;font-size:34px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .s{font-size:13px;color:var(--ink-2)}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 44px;font-size:14px}
+nav.toc a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--accent);border-color:var(--accent);outline:none}
+section{margin:0 0 56px}
+section p{max-width:66ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.rule{border-left:4px solid var(--brand);padding:2px 0 2px 14px;margin:14px 0;max-width:66ch}
+.rule strong{font-weight:600}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+thead th{border-top:0;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.day{white-space:nowrap;font-weight:500}
+tr.key td{background:var(--accent-soft)}
+tr.pull td{background:var(--warn-soft)}
+tr.today td{box-shadow:inset 4px 0 0 var(--brand)}
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:2px 8px;border-radius:3px;white-space:nowrap;letter-spacing:.02em}
+.p-easy{background:color-mix(in srgb,var(--z-easy) 15%,transparent);color:var(--z-easy)}
+.p-mp{background:color-mix(in srgb,var(--z-mp) 15%,transparent);color:var(--z-mp)}
+.p-thr{background:color-mix(in srgb,var(--z-thr) 15%,transparent);color:var(--z-thr)}
+.p-off{background:var(--line);color:var(--ink-2)}
+.p-good{background:var(--good-soft);color:var(--good)}
+.p-warn{background:var(--warn-soft);color:var(--warn)}
+.p-flag{background:var(--bad-soft);color:var(--bad)}
+.wk{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:22px 0 8px}
+.wk h3{margin:0}
+.wk .tot{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-2)}
+.entry{border-top:1px solid var(--line);padding:16px 0}
+.entry:first-of-type{border-top:0;padding-top:0}
+.entry .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:6px}
+.entry .date{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-2)}
+.entry .title{font-weight:600}
+.entry .nums{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-2)}
+.entry p{margin:6px 0 0;font-size:15px}
+.entry ul{margin:6px 0 0;padding-left:18px;font-size:15px}
+.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.zone{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;border-top:3px solid var(--line)}
+.zone.easy{border-top-color:var(--z-easy)}.zone.mp{border-top-color:var(--z-mp)}.zone.thr{border-top-color:var(--z-thr)}
+.zone .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.zone .v{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}
+.zone .s{font-size:13px;color:var(--ink-2)}
+ul.plain{padding-left:18px;margin:8px 0}
+ul.plain li{margin:4px 0;max-width:64ch}
+.open li{margin:6px 0}
+.log{font-size:14px;color:var(--ink-2)}
+.log li{margin:3px 0}
+footer{margin-top:40px;font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:14px}
+
+/* FIGURES */
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px 12px;margin:16px 0;position:relative}
+.fig .ft{font-weight:600;font-size:15px;margin:0 0 2px}
+.fig .fs{font-size:13px;color:var(--ink-2);margin:0 0 10px;max-width:70ch}
+.fig svg{display:block;width:100%;height:auto;overflow:visible}
+.fig .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2);margin:8px 0 0}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.legend i.o{background:transparent;border:2px solid var(--z-easy);box-sizing:border-box}
+.fig text{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;fill:var(--ink-2)}
+.fig text.ann{font-family:"Barlow",sans-serif;font-size:12px;fill:var(--ink)}
+.fig .grid line{stroke:var(--grid);stroke-width:1}
+.fig .axis line{stroke:var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.zbars{display:grid;grid-template-columns:130px 1fr 60px;gap:8px 12px;align-items:center;font-size:13.5px}
+.zbars .lab{font-weight:500;white-space:nowrap}
+.zbars .lab small{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-2);font-weight:400}
+.zbars .bar{display:flex;gap:2px;height:16px}
+.zbars .bar i{display:block;height:100%;border-radius:2px}
+.zbars .pct{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);text-align:right;white-space:nowrap}
+.z1{background:var(--z-easy-soft)}.z2{background:var(--z-easy)}.z3{background:var(--z-mp)}.z4{background:var(--z-thr)}.z5{background:var(--z5)}
+@media (max-width:560px){.stat .v{font-size:28px}.zbars{grid-template-columns:100px 1fr 52px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<div id="app"></div>
+<script id="page-data" type="application/json">{"athlete":"Anni Tovar","slug":"anni-tovar-hartford-2026","artifact_url":"https://claude.ai/code/artifact/a9ecc73d-86b6-49d0-9a70-7ca546c3706e","updated":"Sun Sep 13, 2026","race":{"name":"Hartford Marathon 2026","short":"Hartford 2026","start_iso":"2026-10-10T08:00:00-04:00","distance":26.2},"lede":"Saturday, October 10, 8:00 AM. Bushnell Park, out through South Windsor and back. Target 3:20 — the BQ standard is 3:25, and the last few Boston cycles needed a cushion under it. The engine is there; the six weeks left are about the first three miles of every run.","course":{"aria":"Hartford Marathon course profile with race plan segments","caption":"Hartford Marathon elevation · 754 ft gain, max 182 ft · hover for the draft plan for each section","elev":[[0.0,55],[0.1,55],[0.2,46],[0.4,65],[0.6,80],[0.8,82],[1.0,65],[1.2,65],[1.4,50],[1.6,65],[1.8,76],[2.0,91],[2.2,103],[2.4,120],[2.6,144],[2.7,161],[2.8,141],[2.9,122],[3.0,127],[3.2,112],[3.4,105],[3.6,103],[3.8,102],[4.0,100],[4.2,111],[4.4,141],[4.6,134],[4.8,134],[5.0,139],[5.1,159],[5.2,182],[5.3,159],[5.4,150],[5.6,94],[5.8,91],[6.0,102],[6.2,91],[6.4,76],[6.6,56],[6.7,50],[6.8,67],[7.0,60],[7.2,72],[7.4,82],[7.6,78],[7.8,37],[8.0,30],[8.2,46],[8.3,56],[8.5,35],[8.7,74],[8.9,44],[9.1,19],[9.4,32],[9.7,19],[10.0,19],[10.3,35],[10.6,30],[11.0,30],[11.5,30],[12.0,30],[12.5,30],[13.0,42],[13.3,56],[13.6,44],[13.9,56],[14.1,33],[14.4,67],[14.6,56],[14.8,58],[15.0,37],[15.2,28],[15.6,35],[16.0,41],[16.5,39],[17.0,37],[17.2,44],[17.7,35],[18.0,41],[18.5,39],[19.0,41],[19.3,30],[19.6,41],[20.0,39],[20.5,37],[20.9,30],[21.1,24],[21.4,37],[21.8,30],[22.2,37],[22.4,56],[22.7,42],[23.0,33],[23.5,30],[24.0,35],[24.5,28],[24.8,17],[25.0,15],[25.2,22],[25.3,42],[25.5,72],[25.7,41],[25.9,56],[26.0,39],[26.1,30],[26.2,39]],"landmarks":[[0.3,"Bushnell Park"],[5.2,"East Hartford"],[11,"South Windsor"],[16.5,"Turnaround"],[20,"Decision"],[25.3,"Bridge"],[26.2,"Finish"]],"decision":{"mile":20,"ft":39,"label":"Decision: mile 20"},"segments":[{"a":0,"b":6.5,"name":"Hartford → East Hartford · mi 1–6.5","pace":"7:45–7:55","hr":"≤168","note":"All the real climbing: +70 ft at 2–2.7, +80 ft at 4–5.2, then downhill to mile 9. Give the time away on purpose. Nothing under 7:30."},{"a":6.5,"b":13,"name":"Out to South Windsor · mi 7–13","pace":"7:37","hr":"166–172","note":"Settle only if HR holds. Half in 1:40–1:41."},{"a":13,"b":20,"name":"South Windsor, return · mi 14–20","pace":"7:35–7:37","hr":"≤172","note":"Boring by design. Fuel on schedule."},{"a":20,"b":25,"name":"Back to Hartford · mi 21–25","pace":"7:35 →","hr":"open","note":"Decision at 20: HR under 170 → push."},{"a":25,"b":26.2,"name":"Bridge → Bushnell Park · mi 25–26.2","pace":"effort","hr":"open","note":"The bridge climb is at 25.3 — about 50 ft in a quarter mile, then a smaller bump at 25.8. Hold effort, then everything you saved."}],"max_ft":200},"stats":[{"k":"Goal","v":"3:20","s":"≈ 7:37/mi · Sep 12 gave 7:36 @ MP HR"},{"k":"Longest run","v":"19 mi","s":"Jul 26 · 18 done Sep 6"},{"k":"This week","v":"50 mi","s":"the 20 is Saturday · race clock"},{"k":"Marathon PR","v":"3:37","s":"Philadelphia, Nov '25"},{"k":"Half PR","v":"1:40","s":"Jersey City, Apr '25"}],"sections":{"status":{"title":"Where we are","html":"<p>Fitness is not the question. Six marathons, a 1:40 half, and the biggest volume year of your life — 1,466 miles in 2025 and on pace for ~1,700 this year — absorbed without a real injury. Your 2026 long runs are mostly well run: 11 of 13 negative-split, first three miles at 146–157. The July 26 nineteen-miler is the best long run in six years of your files.<\/p><p>The question is pacing, and the record is unambiguous. You have run two marathons even (NYC '21, Berlin '23) — both without a time goal. Every marathon where you chased a time (Chicago '21, NYC '22, Wineglass '24, Philly '25) went out too fast and positive-split. At Philly your heart rate was at threshold from mile 3; you didn't lose the pace group at the mile 9 hill, you lost it at mile 1. Hartford is the first time you have to race patiently <em>and<\/em> chase a number at once. That is the whole assignment.<\/p><p>Straight answer on 3:20: a coin flip, and the coin is the first 10K, not your legs. Today you're a 3:25–3:30 runner in warm weather. Cool weather, six clean weeks, and a controlled start put 3:20 on the table. Going out at 7:30 takes it off.<\/p><p><strong>Week 1 of the block (Aug 24–30): 49.6 miles, and the first fully clean week in six years of your files.<\/strong> Every easy run under its cap, the ladder run as written, the 17 at dawn with zero seconds over 158 and an 83-second negative split — after a schedule shuffle that put a 9 the day before it. Nothing about the race-day risk has changed, but the process is now right. Five more weeks of exactly this.<\/p><p><strong>First marathon-effort read is in (Sep 6):<\/strong> 166–172 bought 7:47/mi at miles 13–15. BQ pace with change, ten seconds off 3:20 pace, before October air and a taper. The engine argument is closing; what's left is the start line discipline and holding that effort for twenty miles, not three.<\/p><p><strong>Second marathon-effort read (Sep 12): 7:36 average at 165–171<\/strong> — goal pace, at the right heart rate, on pull-back legs. The Sep 6 eighteen said 7:47; freshness and cooler air closed nine seconds. Saturday's twenty, ending on six continuous MP miles, decides the race bands.<\/p>"},"data":{"title":"What the data says","intro":"<p>Everything here is from your Strava archive — 1,170 runs with heart rate since September 2020 — and Final Surge. Hover anything for the numbers.<\/p>","figures":[{"id":"fig-marathons","kind":"halves","title":"Every marathon: first half vs. second half","sub":"Pace per mile. A taller second bar means the second half was slower. The two even races had no time goal. All four time-goal races went out too fast.","data":[["Chicago 2021",536,706,"time goal · 4:38, blew up"],["NYC 2021",551,554,"no time goal · 4:02, even"],["NYC 2022",530,699,"time goal · 4:29, blew up"],["Berlin 2023",551,549,"no time goal · 4:04, even"],["Wineglass 2024",498,527,"time goal · 3:45"],["Philly 2025",469,502,"time goal · 3:37"]]},{"id":"fig-easy","kind":"monthly_hr","cap":155,"pct_label":"of easy miles over 158","title":"Easy runs by month: median heart rate","sub":"Unlabeled easy runs, excluding mile 1. The label is the share of easy miles over 158. About half of your August easy runs were under the cap — Aug 24 was one of them — and the other half pulled the month up.","data":[["Sep '25",155.9,38],["Oct",155.0,42],["Nov",155.7,29],["Dec",156.4,33],["Jan '26",154.8,20],["Feb",157.3,43],["Mar",156.6,38],["Apr",154.6,31],["May",156.0,38],["Jun",157.2,42],["Jul",155.5,38],["Aug",159.8,57]]},{"id":"fig-starts","kind":"start_split","race_start_hour":8,"title":"Long runs since 2025: start time vs. how the back half went","sub":"Below the line is a negative split. Every long run that started before 8 AM but one was negative. Both August blow-ups started after 8:30. Hartford starts at 8.","data":[["2025-03-01",8.6,152,8],["2025-03-08",15.63,155,4],["2025-03-15",8.82,152,-2],["2025-03-23",7.55,153,-21],["2025-10-04",7.75,152,-25],["2025-10-12",7.93,161,-23],["2025-10-18",7.48,155,-3],["2025-10-25",7.92,153,4],["2025-11-02",7.05,154,-12],["2026-05-16",6.77,152,-62],["2026-05-23",10.3,146,47],["2026-06-07",7.47,155,-16],["2026-06-14",6.23,155,-17],["2026-06-21",6.05,154,-38],["2026-06-27",7.65,152,-37],["2026-07-19",5.58,150,-72],["2026-07-26",6.0,151,-27],["2026-08-14",9.8,161,46],["2026-08-23",8.52,157,-24]],"annotations":[{"x":9.8,"y":46,"text":"Aug 14","dx":-10,"anchor":"end"},{"x":10.3,"y":47,"text":"May 23","dx":10},{"x":6.0,"y":-27,"text":"Jul 26","dx":10},{"x":5.58,"y":-72,"text":"Jul 19","dx":10}]}]},"rules":{"title":"The rules","items":[{"strong":"Heart rate governs, pace follows.","text":"Easy runs at or under 155. In this heat that reads 9:15 or slower, and that's the point. Over the cap: slow down, or walk 30 seconds. Aug 24 (8:54 at 148) is what it looks like when it's cool; Aug 19 (8:52 at 159) is what it looks like when it isn't."},{"strong":"Long runs at dawn.","text":"Start by 6:30. First three miles under 150, easy miles under 158. Push only in the marathon-pace miles you're given, and there the target is a heart rate — 166–172 — with the pace written down after."},{"strong":"Sunday is the easiest day of the week.","text":"The day after the long run has been your hardest-run day all year (average 159 vs. 152–157 every other day). Cap it at 150, or take it off."},{"strong":"Marathon effort is 166–172, not 175.","text":"Your \"MP\" reps this cycle landed at 173–178 — that's threshold. From here MP segments are set by heart rate and we learn what pace comes out. That number in cool weather is the honest goal."},{"strong":"Every long run is race morning.","text":"Same wake-up, same breakfast at the same offset from an 8 AM start, gels every 30–35 minutes, salt twice an hour. Eating late is what's been sending you to the bathroom at mile 6. Nothing new after the 20 on Sep 19."},{"strong":"No strap, so the race runs on pace and feel.","text":"Decision made: wrist only. Your training wrist data is clean; race data isn't — at Philly the watch read your cadence, not your heart. So Hartford is paced by the bands the Sep 19 twenty sets, with breathing as the effort check. Mid-race rule: if HR suddenly reads 185+ but breathing is still under control, look at cadence — two numbers within ~5 of each other means the watch is counting steps. Ignore it and run the plan."},{"strong":"The pull-back week is planned.","text":"Sep 7–13 drops to ~38 miles on purpose. It's not a sign anything's wrong; it's what makes the 20 and race day work."},{"strong":"Say it early.","text":"If motivation dips or a run scares you before you start, text Jorge that day. Every time you've written \"zero belief in myself\" in a note you went out and executed anyway — but saying it early changes the plan, not the goal, and it's the strong move."}]},"zones":{"title":"Heart rate zones","intro":"<p>Built on an HRmax of ~190 (plausible range 188–195; every zone below holds across it). Three separate 5K-effort sessions peaked at 182–184 and race averages agree. These zones govern training. On race day HR is a cross-check only — wrist optical has produced cadence-lock artifacts in races, so the race itself is paced by pace bands and breathing.<\/p>","cards":[{"cls":"easy","k":"Easy","v":"≤155","s":"most of your week · Sunday ≤150"},{"cls":"easy","k":"Long run, easy miles","v":"≤158","s":"first 3 miles under 150"},{"cls":"mp","k":"Marathon effort","v":"166–172","s":"race-day HR through mile 20"},{"cls":"thr","k":"Threshold","v":"174–178","s":"where your \"MP\" reps have been landing"}]},"calendar":{"title":"This week","toc":"This week","intro":"Your daily workouts live in Final Surge; this is the same week with the heart-rate cap attached to each day, which Final Surge doesn't show.","weeks":[{"title":"Week of Aug 24 — 49.6 mi done · long run 17","tot":"~50 mi · long run 17","rows":[{"day":"Mon 8/24","run":"6.75 mi <span class=\"pill p-easy\">easy<\/span>","hr":"≤155","notes":"8:54 at 148 avg, 63°F, 7:54 AM. That's an easy run.","done":true},{"day":"Tue 8/25","run":"<span class=\"pill p-off\">off<\/span> · Stretch+ 50 min","hr":"","notes":"Deadlift day. Fine.","done":true},{"date":"2026-08-26","day":"Wed 8/26","run":"Tempo · \"Descend the…\" 1:05 <span class=\"pill p-thr\">threshold<\/span>","hr":"≤178 in the reps","notes":"Done as written — reviewed below.","done":true},{"date":"2026-08-27","day":"Thu 8/27","run":"9 mi <span class=\"pill p-easy\">easy<\/span>","hr":"≤155","notes":"Moved to Saturday.","done":"<span class=\"pill p-off\">moved → Sat<\/span>"},{"date":"2026-08-28","day":"Fri 8/28","run":"9 mi <span class=\"pill p-easy\">easy<\/span>","hr":"≤155","notes":"150 avg — reviewed below.","done":true},{"date":"2026-08-29","day":"Sat 8/29","run":"9 mi easy <span class=\"pill p-easy\">easy<\/span>","hr":"≤150","notes":"148 avg — reviewed below.","done":true},{"date":"2026-08-30","day":"Sun 8/30","key":true,"run":"<strong>17 mi long<\/strong> <span class=\"pill p-easy\">easy<\/span>","hr":"≤158 · first 3 &lt;150","notes":"6:28 AM, 149 avg, 10:36 → 9:13 halves. Reviewed below.","done":true}]},{"title":"Week of Aug 31 ~50 mi · long run 18 (Sat)","tot":"~50 mi","rows":[{"date":"2026-08-31","day":"Mon 8/31","run":"7 mi easy <span class=\"pill p-easy\">easy<\/span>","hr":"≤150","notes":"Day after the long run. 147 avg — reviewed below.","done":true},{"date":"2026-09-01","day":"Tue 9/1","run":"off · Stretch+","hr":"","notes":"Lift."},{"date":"2026-09-02","day":"Wed 9/2","run":"LT quarters · 1:00 <span class=\"pill p-thr\">threshold<\/span>","hr":"174–178 in the reps, cap 178","notes":"Reps 7:04 → 6:34, end-of-rep HR 167 → 179. Reviewed below. No strap in the file.","done":true},{"date":"2026-09-03","day":"Thu 9/3","run":"9 mi easy <span class=\"pill p-easy\">easy<\/span>","hr":"≤155","notes":"9:32 at 149 avg / 158 max — on cap.","done":true},{"date":"2026-09-04","day":"Fri 9/4","run":"9 mi easy <span class=\"pill p-easy\">easy<\/span>","hr":"≤150","notes":"Swapped with Saturday (to confirm).","done":"<span class=\"pill p-off\">swapped → off<\/span>"},{"date":"2026-09-05","day":"Sat 9/5","run":"9 mi easy <span class=\"pill p-easy\">easy<\/span>","hr":"≤150","notes":"6:22 AM, 9:18 at 147 avg / 156 max — dawn shakeout, textbook.","key":false,"done":true},{"date":"2026-09-06","day":"Sun 9/6","run":"<strong>18 mi long<\/strong> · 3 <span class=\"pill p-easy\">≤145<\/span> + 9 <span class=\"pill p-easy\">150–155<\/span> + 4 <span class=\"pill p-mp\">MP 166–172<\/span> + 2 <span class=\"pill p-easy\">≤158<\/span>","hr":"per step","notes":"8:27 AM. MP: 7:42/7:46/7:52 @ 166–171, 3 of 4. Reviewed below.","key":true,"done":true}]},{"title":"Week of Sep 7 — pull-back","tot":"~38 mi","pull":true,"rows":[{"date":"2026-09-07","day":"Mon 9/7","run":"6 mi easy <span class=\"pill p-easy\">easy<\/span>","hr":"≤150","notes":"145 avg / 155 max — reviewed below.","done":true},{"date":"2026-09-08","day":"Tue 9/8","run":"off · Stretch+","hr":"","notes":"Lift."},{"date":"2026-09-09","day":"Wed 9/9","run":"Hills + drills · 50 min <span class=\"pill p-thr\">threshold<\/span>","hr":"cap 178 on reps","notes":"6 reps, peak 176 vs cap 178 — first quality session ended AT the cap. Reviewed below.","done":true},{"date":"2026-09-10","day":"Thu 9/10","run":"7 mi easy <span class=\"pill p-easy\">easy<\/span>","hr":"≤155","notes":"147 avg — on cap.","done":true},{"date":"2026-09-11","day":"Fri 9/11","run":"off","hr":"","notes":"Rest day; ran 5 easy anyway (146 avg). Priced below — Sunday cancelled.","done":"<span class=\"pill p-flag\">ran 5<\/span>"},{"date":"2026-09-12","day":"Sat 9/12","run":"<strong>14 mi<\/strong> · 10 <span class=\"pill p-easy\">easy<\/span> + 4 <span class=\"pill p-mp\">MP 166–172<\/span>","hr":"easy ≤158","notes":"6:20 AM. MP 7:35/7:26/7:38/7:44 @ 165–171 — all four, at the cap, ending at effort. Reviewed below.","key":true,"done":true},{"date":"2026-09-13","day":"Sun 9/13","run":"<span class=\"pill p-off\">off<\/span> (was 5 easy)","hr":"","notes":"Cancelled — Friday's unprescribed 5 already spent these miles. Week closes at ~37 as prescribed."}]}],"outro":"Next week (Aug 31–Sep 6): ~50 mi, LT quarters Wed, 18 on Saturday. Then the pull-back. The outline is below; the days are in Final Surge."},"road":{"title":"The road to Oct 10","toc":"Road to Oct 10","figure":{"id":"fig-long","kind":"longrun","pad":5,"round_labels":true,"taper_at":15.5,"title":"Long-run progression, 2026 build","sub":"Filled bars are done. Outlined bars are planned. The 20 on Sep 19 is the full dress rehearsal — strap, breakfast, gels, start time, last 6 at marathon effort. Three-week taper after it.","data":[["5/16",14.4,"done"],["5/23",14.2,"done"],["6/7",14.8,"done"],["6/14",15.1,"done"],["6/21",17.2,"done"],["6/27",17,"done"],["7/19",16,"done"],["7/26",19,"done"],["8/8",10,"done"],["8/14",15,"done"],["8/23",16,"done"],["8/30",17,"done"],["9/6",18,"done"],["9/12",14,"pull"],["9/19",20,"plan"],["9/26",14,"plan"],["10/3",10,"plan"],["10/10",26.2,"race"]]},"bullets":["Volume: 50 / 50 / 38 (pull-back) / 50, then ~40 / ~30 / race week. No week past 50 — you cracked once in early August under less, and the fitness is already in the bank.","Long run stays at or under 38% of the week. It's the weekly miles that are the constraint, not the long run.","Long runs 17 → 18 → 14 (pull-back, 4 at MP) → 20 → 14 → 10. Each of the 18 and the 20 rehearses race morning start to finish.","Last three weeks: midweek runs move to the morning too. 215 of your last 399 runs started after 3 PM; the race starts at 8.","Taper: one short sharp session a week stays in. Visualization work starts Sep 21 — details added then."]},"reviews":{"title":"Run reviews","intro":"<p>Newest first. Each entry: what happened, what it means, what changes. Added after the runs that matter — send the file.<\/p>","entries":[{"date":"Sat Sep 12","title":"Pull-back 14 · 4 at marathon effort","nums":"14.02 mi · 2:07 · 6:20 AM · MP 7:35 / 7:26 / 7:38 / 7:44 @ 165–171","pill":{"cls":"p-good","text":"the number showed up"},"html":"<p>6:20 start. First three at 137–143 under the 145 cap. Seven miles parked at 150–153. Then four marathon-effort miles to the line: <strong>7:35, 7:26, 7:38, 7:44 — 7:36 average — at 165–171<\/strong>, one percent of the run over 172, finished at effort like race day. Halves 9:48 → 8:20.<\/p><p>What this number means: 7:36 is 3:19:30 marathon pace, and it came out at the correct heart rate. Two weeks ago the 18 returned 7:47; today returned 7:36 on pull-back-fresh legs — which is closer to what taper legs will feel like than any 50-mile week is. Same caveat as always, stated once: four miles is evidence the pace exists, not that it holds. Saturday's twenty ends with six of these in a row. That's the last exam.<\/p><p>One correction inside a good run: mile 12 at 7:26 is 3:15 pace. It stayed inside the HR zone so it's not a violation — but on race day that mile is the one that costs you at 22. Metronome, not surges: the 7:35–7:44 miles are the model.<\/p>"},{"date":"Fri Sep 11","title":"Unprescribed 5 · rest day","nums":"5.02 mi · 0:46 · 9:06 avg · 146 avg / 156 max · 5:36 PM","pill":{"cls":"p-warn","text":"not on the plan"},"html":"<p>Friday was off. Off means off — the day existed to set up the 14, and the week was a pull-back, which only works at reduced load. You ran it genuinely easy (146), so this cost little, and the 14 the next morning was excellent anyway. Noted and priced: <strong>Sunday's 5 is cancelled<\/strong>, which puts the week back at its prescribed 37. Feeling fresh mid-pull-back is the plan working, not spare capacity to spend.<\/p>"},{"date":"Thu Sep 10","title":"Easy 7","nums":"7.02 mi · 1:04 · 9:11 avg · 147 avg / 157 max · 5:41 PM","pill":{"cls":"p-good","text":"easy, done right"},"html":"<p>147 average, one percent over 155, flat across the back half. Nothing to add.<\/p>"},{"date":"Wed Sep 9","title":"Hills + drills · 6 × 30s","nums":"4.96 mi · 0:50 · 5:31 PM · 348 ft · 149 avg / 176 peak","pill":{"cls":"p-good","text":"under the ceiling — noted"},"html":"<p>Two miles of warm-up at 134–147, six short hill reps with full jog-downs, two miles of cool-down at 153–154. Peak heart rate 176 against a 178 cap — and this is the first quality session of the block where the last rep didn't press through the ceiling. That's not a small thing: two sessions ago the note on this page said practice ending reps at the cap, and this file is what that looks like. The same discipline at mile 3 in Hartford is worth minutes.<\/p>"},{"date":"Mon Sep 7","title":"Easy 6 · day after the 18","nums":"6.02 mi · 0:55 · 9:13 avg · 145 avg / 155 max · 10:01 AM","pill":{"cls":"p-good","text":"easy, done right"},"html":"<p>Day-after cap 150, run at 145 average with the last mile touching 151. The 9:50 → 8:43 progression came at flat heart rate — recovery legs doing recovery work. Nothing to add.<\/p>"},{"date":"Sun Sep 6","title":"Long 18 · 4 MP prescribed, 3 run","nums":"18.02 mi · 2:49 · 9:23 avg · 153 avg / 174 max · 8:27 AM · 449 ft","pill":{"cls":"p-warn","text":"great data, two misses"},"html":"<p>The running itself: warm-up at 138–143, nine miles sitting in 151–153 — in the zone, not under it, exactly as built — then marathon effort from mile 13: <strong>7:42 at 166, 7:46 at 170, 7:52 at 171<\/strong>, and easy home. Halves 9:48 → 8:59. Zero seconds over 172 all day. This is the best HR discipline you've shown on a long run with quality in it.<\/p><p>The number this run existed to produce: marathon effort bought <strong>7:47 average<\/strong>. BQ pace is 7:49. 3:20 pace is 7:37. So at miles 13–15 in September, on wrist HR, you are already at BQ pace at the correct effort, ten seconds shy of the goal — and cool October air is worth several of those seconds. The sober half: within three miles the price rose — 7:42 at 166 became 7:52 at 171. Three miles proves the pace exists; Sep 19 and race day are about whether it holds.<\/p><p>Two misses, stated plainly. One: 8:27 start. The rule on this page says out by 6:30, and you proved Saturday at 6:22 that you can. It didn't cost you this time; the rule isn't there for the times it doesn't cost you. Two: the build said four MP miles, the file shows three. If you shut it down because mile 15 was riding 171–174 — that's the system working, and the right call. If the watch had the old workout — sync it. Tell Jorge which one it was.<\/p><p>Also still missing after two rehearsals: the fueling report. Gels taken and when, salt count, stomach, what breakfast and what time. That data is half the point of a rehearsal — text it to Jorge same-day like it's part of the run, because it is.<\/p>"},{"date":"Wed Sep 2","title":"LT quarters · 8 × 400","nums":"7.17 mi · 1:00 · 5:51 PM · reps 7:04 → 6:34 · 160 avg / 179 peak","pill":{"cls":"p-good","text":"strong — one habit to name"},"html":"<p>Eight quarters with 200 jogs, every rep faster than the last: 7:04, 7:00, 6:58, 6:53, 6:53, 6:45, 6:36, 6:34. End-of-rep heart rate walked up exactly as it should — 167, 171, 173, 175, 175, 177, 178, 179 — and the cool-down came back to 156–160. As an effort progression this was well built: into the zone by rep four, held there, done.<\/p><p>The habit worth naming: that's now two quality sessions in a row where the last two reps pressed into the ceiling instead of sitting at it — the cap was 178 and the final quarter touched 179 at 6:34, which is 5K speed, not threshold. It costs nothing on a Wednesday in September. The reason we name it is that the same instinct — 'HR's at the limit, push anyway' — is exactly what has ended every time-goal marathon early. Practice ending reps at the cap now, and mile 3 in Hartford gets easier.<\/p><p>Also: this was the session meant to confirm max heart rate, and it ran on the wrist — no strap in the file. Quarters are too short to peak HR anyway, but the 20-miler on Sep 19 is the run that sets your race zones, and it needs the strap. Clock's running on ordering one.<\/p>"},{"date":"Mon Aug 31","title":"Easy 7 · day after the long run","nums":"7.02 mi · 1:05 · 9:19 avg · 147 avg / 158 max · 5:22 PM","pill":{"cls":"p-good","text":"easy, done right"},"html":"<p>Day-after-long-run cap is 150 and you averaged 147 with a 9:47 first mile at 135. Miles 5–6 crept to 151 — that's the cap, not over it. Legs clearly fine after 26 weekend miles, which is the point of running the weekend the way you did.<\/p>"},{"date":"Sun Aug 30","title":"Long 17 · dawn","nums":"17.02 mi · 2:41 · 9:28 avg · 149 avg / 160 max · 6:28 AM · 463 ft","pill":{"cls":"p-good","text":"model long run"},"html":"<p>Out the door at 6:28, first three miles at 10:00–10:26 with heart rate at 140–146, then a steady descent to 9:00–9:04 by the end with HR never above 160 — not one second over the 158 cap in 2 hours 41. Halves: 10:36 at 146, then 9:13 at 152. That's an 83-second-per-mile negative split with a six-beat rise, on the day after a 9-miler.<\/p><p>Put this beside the Jul 26 nineteen (avg 158) and the Aug 23 sixteen (avg 164): same routes, same runner, ten to fifteen beats cheaper. This is what the long-run easy portion should look like from here on. The start was cautious — that's the right error to make, and on the 18 and the 20 the back half will have a job, so the easy miles can sit at 150–155 rather than 143.<\/p><p>Two things not in the file: how the fueling went (gel every 30–35, salt 2/hr) and how the stomach held. Tell Jorge — the 18 is the first full race-morning rehearsal and that's the part we still can't see in the data.<\/p>"},{"date":"Sat Aug 29","title":"Easy 9 · moved from Thursday","nums":"9.01 mi · 1:23 · 9:14 avg · 148 avg / 156 max · 5:02 PM","pill":{"cls":"p-good","text":"at the cap"},"html":"<p>Cap for the day before the 17 was 150; you averaged 148, topped out at 156, and every mile sat at 149–151. At the cap rather than under it, but the cap held and the next morning proved it didn't cost anything. Note 9:14 at 148 versus Friday's 9:41 at 150 — same route, same hour — that's weather, not fitness, and it's why we don't judge August paces.<\/p>"},{"date":"Fri Aug 28","title":"Easy 9","nums":"9.02 mi · 1:27 · 9:41 avg · 150 avg / 158 max · 5:06 PM","pill":{"cls":"p-good","text":"easy, done right"},"html":"<p>Nine miles with 98% of the run at or under 155, zero seconds over 158, and heart rate dead flat from first half to second (150 → 151). You took 9:40s to get that — which is precisely the deal in late-August heat, and you didn't fight it.<\/p><p>Put this next to Aug 19: same 9 miles, same time of day, but 8:52 at 159–167. That's what the cap change looks like in practice. Runs like this one are what let the Sunday 17 and the September MP work actually land.<\/p>"},{"date":"Wed Aug 26","title":"Ladder 6-5-4-3-2-1 · “Descend the reps”","nums":"7.76 mi · 1:05 · 5:18 PM · reps 7:26 → 6:27 · 161 avg / 181 peak","pill":{"cls":"p-good","text":"executed as written"},"html":"<p>Prescription: descending reps by feel, HR ≤178 in the reps, warm-up included. That's what happened. Thirty minutes of warm-up at 137–160, then 6/5/4/3/2/1 minutes at 7:26 · 7:23 · 7:13 · 7:09 · 6:58 · 6:27 with jogged recoveries — every rep faster than the last. End-of-rep HR ran 170 / 173 / 176 / 178 / 179 / 178: you rode the cap on the last two reps instead of stopping the descent like the prescription said. It cost nothing today (peak 181), but the rule exists for race-week versions of this feeling.<\/p><p>The number that matters: the 6-minute rep ran <strong>7:26 at 169 avg<\/strong> — goal-pace territory at marathon heart rate, in August, at 5 PM. On Jul 22, 7:25 cost 173–177. One six-minute rep is not a marathon, and rep averages flatter you because HR is still climbing into them — so this proves nothing yet. But it's the first time the goal pace has shown up at the right heart rate, and that's the thing we're watching for. The September long-run MP segments settle it.<\/p><p>Peak 181 on the short reps fits the ~190 max we're working from. Strap confirms it when it arrives.<\/p>"},{"date":"Mon Aug 24","title":"Easy 6.75","nums":"1:00 · 8:54 avg · 148 avg / 157 max · 7:54 AM · 63°F","pill":{"cls":"p-good","text":"easy, done right"},"html":"<p>Under the cap the whole way, negative split by feel (9:15 → 8:51), morning start. This is the standard, and it's worth noticing that it's 8:54 — the cap doesn't cost you pace when it's cool and you start easy.<\/p>"},{"date":"Sun Aug 23","title":"Long 16","nums":"2:19 · 8:42 avg · 164 avg / 170 last 2 mi · 8:31 AM · 66°F","pill":{"cls":"p-warn","text":"well run, not easy"},"html":"<p>As a progression run this was clean: 8:52 → 8:31, HR and pace moved together, low drift. But it was logged as an easy long run and you spent 15 miles at 160–170; only mile 1 was easy. Useful number: 8:12 at 170 in August is roughly 7:50 at the mid-160s in October. That says 3:20 is on the table with no margin yet.<\/p>"},{"date":"Wed Aug 19","title":"Easy 9","nums":"1:20 · 8:52 avg · 159 avg / 171 max · 4:59 PM · 86°F","pill":{"cls":"p-flag","text":"not an easy run"},"html":"<p>84–88% of max for nine miles, three days after the worst run of the cycle. Some of that is 86° at 5 PM; most of it is pace. Compare Apr 19 — 13 miles at 9:05, 153 average, and you wrote \"this was a very easy run.\" Same athlete.<\/p>"},{"date":"Fri Aug 14","title":"Long 15 · \"worst run of the cycle\"","nums":"2:12 · 8:49 avg · 166 avg / 177 max · 9:48 AM · 73°F","pill":{"cls":"p-flag","text":"pacing, not fitness"},"html":"<p>Halves 8:26 → 9:12. Miles 2–5 at 7:55–8:12 with HR already at 170–174, then a wall from mile 6. Same shape as Philly in miniature: late start, warm, first three miles too fast. Nothing about it says you weren't fit. Everything about it says the plan started at mile 1 and the run started at mile 6.<\/p>"},{"date":"Sun Jul 26","title":"Long 19","nums":"2:48 · 8:49 avg · 158 avg / 170 max · 6:00 AM · 61°F","pill":{"cls":"p-good","text":"the model long run"},"html":"<p>Best long run in six years of files. First three at 151, fifteen miles under 160, 9:03 → 8:36 with an 8:18 last mile and energy left. Dawn start, easy first 5K, controlled build. This is the run to picture on Sep 19 and on Oct 10.<\/p>"},{"date":"Wed Jul 22","title":"\"30 min at MP\"","nums":"3 mi at 7:25 · 173–177","pill":{"cls":"p-warn","text":"that was threshold"},"html":"<p>Marathon effort for you is 166–172. 7:25 at 173–177 is a threshold workout wearing an MP label, and Jul 19 was the same (6 at 7:33, HR 172–177). Not a failure — you did what the pace said — but it means the MP prescriptions have been 10–15 s/mi ahead of fitness, and that's why the long runs after them felt flat. Fixed going forward: MP by heart rate.<\/p>"}]},"race":{"title":"Race plan · Hartford, Oct 10 (v1 draft)","intro":"<p>Not final. Paces get set after the 20 on Sep 19 tells us what 166–172 is worth in cool weather. What's fixed already is the shape: the hilly first 10K is run on heart rate, the flat middle is where the race is, and nothing under 7:30 happens before mile 6. The course profile at the top of the page is this table, drawn.<\/p>","rows":[{"miles":"1–6.5","section":"Hartford → East Hartford, rolling","pace":"7:45–7:55","hr":"≤168","notes":"All the real climbing is here: +70 ft at mile 2–2.7, +80 ft at 4–5.2 (the course high point, 182 ft), then downhill to mile 9. Give the time away on purpose. 7:30 in this section is the mistake you've made four times."},{"miles":"7–13","section":"Out to South Windsor, flat","pace":"7:37","hr":"166–172","notes":"Settle only if HR holds. Half split 1:40–1:41."},{"miles":"14–20","section":"Back through South Windsor","pace":"7:35–7:37","hr":"≤172","notes":"Boring by design. Gels on schedule, salt at 10 and 20."},{"miles":"21–25","section":"Return to Hartford","pace":"7:35 →","hr":"open","notes":"Decision at 20: HR under 170 → push."},{"miles":"25–26.2","section":"Bridge → Bushnell Park","pace":"effort","hr":"open","notes":"One climb, ~50 ft at 25.3, then a smaller bump at 25.8. Hold effort over them, then everything you saved."}],"fixed":["Paced by pace bands + breathing, set from the Sep 19 twenty. Wrist HR is a cross-check, not the governor.","Cadence-lock rule: HR reading 185+ while breathing is controlled → check cadence; if within ~5, the number is your steps. Ignore it.","Hard floor that needs no HR: nothing under 7:30 before mile 6.","Breakfast, shoes, gels, salt, and the 8 AM timing all rehearsed on the 20.","Visualization and confidence work in the final three weeks; details added at taper."]},"open":{"title":"Open items","items":["<strong>Strap: closed.<\/strong> Decision is wrist-only. Race plan rewritten to pace-first with the cadence-lock rule; HRmax stays a working ~190.","<strong>Sat Sep 5 eighteen<\/strong> — does it carry marathon-effort miles in the back half (3–4 at 166–172), or stay all easy? Jorge confirms by Thursday.","<strong>Official race times<\/strong> for the profile (Wineglass, Philly, Jersey City) — the watch numbers are close but not official.","<strong>Heat<\/strong> — pace at equal HR barely moves 50–85°F in the archive. Without a strap this stays unresolved; judged moot for a 50°F race morning.","<strong>Fueling on the 17<\/strong> — gels/salt taken as prescribed? Stomach? Not in the file; tell Jorge."]},"changelog":{"title":"Changelog","items":[{"date":"Sep 13","html":"Pull-back 14 reviewed: 4 MP miles at 7:36 avg @ 165–171 — goal pace at goal effort. Friday's unprescribed 5 flagged; Sunday's 5 cancelled to hold the week at 37. Thu 7 reviewed clean."},{"date":"Sep 10","html":"Reviews added: Sep 7 easy 6 and Sep 9 hills. The hills session is the first quality day of the block finished under the rep cap — the ride-the-ceiling correction landed."},{"date":"Sep 7","html":"Strap decision closed: wrist-only. Race plan rewritten pace-first — bands set by the Sep 19 twenty, breathing as the effort check, cadence-lock detection rule added. Training zones unchanged."},{"date":"Sep 7","html":"Long 18 reviewed: MP miles 7:42/7:46/7:52 at 166–171 — first goal-effort data of the block, at BQ pace already. Flags: 8:27 start against the 6:30 rule; 3 of 4 MP miles run. Pull-back week (Sep 7–13) added to the calendar. Fueling report now a standing requirement on rehearsal runs."},{"date":"Sep 6","html":"Sunday's 18 built in Final Surge as an HR-target workout: 3 ≤145 / 9 @ 150–155 / 3 @ marathon effort 166–172 / 2 ≤158 — first structured MP miles of the block."},{"date":"Sep 6","html":"Thu and Sat files reviewed — both easy runs on cap (149 and 147 avg), Saturday at dawn. Weekend swapped again: 9 on Saturday, the 18 moves to Sunday. Calendar updated."},{"date":"Sep 3","html":"Run review added: Sep 2 LT quarters. Pattern named: second straight quality session pressing past the rep cap at the end. Strap still missing from the data."},{"date":"Sep 1","html":"Final Surge now matches the plan: Sep 7–13 is the pull-back (6 / hills / 7 / 14 as 10 + 4 at marathon effort / 5 ≈ 38 mi), then Sep 14–20 at ~50 with the 20 on Sep 19. The 19 that was on Sep 12 is gone."},{"date":"Sep 1","html":"Reviews added for Aug 29 (easy 9), Aug 30 (long 17) and Aug 31 (easy 7). Week 1 closed at 49.6 mi, all runs on cap. Week of Aug 31 added to the calendar with HR caps; Sat Sep 5 eighteen set up as the first full race-morning rehearsal."},{"date":"Aug 29","html":"New section: <em>The prediction<\/em> — Vickers–Vertosick estimate (3:42, band 3:26–3:58) from the Apr ’25 half + current mileage, with the caveats it deserves. Same model now runs on every athlete’s page."},{"date":"Aug 29","html":"Thursday's easy 9 moved to Saturday (Anni's call). Cap tightened to ≤150 for it — it now sits the day before the 17."},{"date":"Aug 29","html":"Run review added: Aug 28 easy 9 — fully under the cap, the counterexample to Aug 19."},{"date":"Aug 27","html":"Run review added: Aug 26 descending ladder — first quality session under the HR prescriptions. Calendar marked."},{"date":"Aug 27","html":"Course profile redrawn from the findmymarathon.com elevation chart (754 ft gain, 782 ft loss, 15–182 ft). The climbing is all in miles 2–5.5; the finish-area bridge is at 25.3, not 24.5. Race-plan sections re-cut to match. Template: course landmark labels now stagger automatically when two are close together."},{"date":"Aug 27","html":"Page moved onto the shared Lane 8 template (one template for every athlete; content lives in page.json). No content changes."},{"date":"Aug 27","html":"Page rebuilt on the club template: live countdown, Hartford course profile with a v1 draft plan, three charts from the Strava archive, long-run progression, this-week table with HR caps. Aug 24 easy run reviewed. Pace-at-HR \"improvement\" claim withdrawn after Anni's challenge — the 2023→2026 gain was mostly a rebound from a detrained late 2023; vs. 2022 she's flat at equal HR. The case for the caps is durability, not speed."},{"date":"Aug 25","html":"Full Strava archive processed (1,170 runs with HR, 2020→now). Six marathons found, not four; Oct 6 2024 identified as Wineglass. Pattern named: even splits only in no-time-goal races. Ten FIT files reviewed; HRmax ~190; zones set; wrist-only HR history confirmed. Four-year Final Surge export unpacked. Hartford confirmed as target. Sep 7–13 proposed as pull-back."}]},"prediction":{"title":"The prediction","toc":"Prediction","intro":"<p>New on this page: a finish-time estimate from the Vickers–Vertosick model — built from a study of 493 marathoners, it predicts marathon time from a recent race plus weekly mileage. It is deliberately blunt: it knows exactly two things about you, and one of them is out of date. Its input race is your Jersey City half (1:40, April 2025), because that is the newest race on file — nothing raced in 2026.<\/p>","cards":[{"cls":"","k":"Model estimate","v":"3:42","s":"from the 1:40 half + 37 mi/wk"},{"cls":"easy","k":"68% band","v":"3:26–3:58","s":"±16 min — marathons are noisy"},{"cls":"mp","k":"Goal","v":"3:25:00","s":"BQ standard — just past the fast edge"}],"center_s":13315,"band_s":[12365,14265],"goal_s":12300,"goal_label":"BQ 3:25","basis":["The model can’t see what this cycle looks like: the Aug 26 ladder put goal pace at HR 169 — marathon effort, not threshold — and your long runs have been negative-split with controlled starts. The honest read is that you’re ahead of this line.","What it does see is real: 3:25 has not yet been demonstrated on a start line. The record proves 3:37 (Philly) and a 1:40 half. The gap between proven and planned is what this cycle closes.","More mileage barely moves it (+10 mi/wk sustained ≈ 3 min). What moves your actual race is the HR caps and a patient first 10K — the two things already on the rules list."],"outro":"Sep 19 is the calibration: 20 miles, chest strap, MP segments at 166–172. Hartford pacing gets set from what that run returns — not from this model, and not from hope."}},"footer":"Source files (Final Surge exports, Strava archive, FIT files, training log) live in the Lane 8 folder. This page is the shared view; it's rewritten from those files, not the other way around. Course elevation digitized from findmymarathon.com (course updated 12/23/2025); for pacing context only."}</script>
+<script>/* Lane 8 Track Club · athlete page renderer
+   Reads the JSON in <script id="page-data"> and builds the whole page.
+   Athlete-specific content lives ONLY in page.json. Change this file to change every athlete's page. */
+(function(){
+const P=JSON.parse(document.getElementById('page-data').textContent);
+const $=(s,r=document)=>r.querySelector(s);
+const NS='http://www.w3.org/2000/svg';
+const el=(t,a={},p)=>{const e=document.createElementNS(NS,t);for(const k in a)if(a[k]!==undefined)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;};
+const txt=(p,a,s)=>{const t=el('text',a,p);t.textContent=s;return t;};
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const mmss=s=>{s=Math.round(s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const j=(a,f)=>(a||[]).map(f).join('');
+const pill=(cls,t)=>t?`<span class="pill ${cls}">${t}</span>`:'';
+const R=P.race||{};const DIST=R.distance||26.2;
+
+/* ================= MARKUP ================= */
+const S=P.sections||{};
+const sec=(id)=>S[id]||{};
+const order=P.section_order||['status','data','prediction','rules','zones','calendar','road','reviews','race','open','changelog'];
+const present=order.filter(id=>S[id]);
+
+function figMarkup(f){
+  const body=f.kind==='zonebars'?`<div class="zbars" id="${f.id}-bars"></div>`:`<svg viewBox="0 0 ${f.w||760} ${f.h||FIG_H[f.kind]||240}"></svg>`;
+  return `<div class="fig" id="${f.id}"><p class="ft">${f.title||''}</p>${f.sub?`<p class="fs">${f.sub}</p>`:''}${body}${legendMarkup(f)}</div>`;
+}
+const FIG_H={halves:250,monthly_hr:230,start_split:250,hr_dots:240,weekly_minutes:220,sleep_recovery:240,longrun:230};
+function legendMarkup(f){
+  const L=f.legend===undefined?DEFAULT_LEGEND[f.kind]&&DEFAULT_LEGEND[f.kind](f):f.legend;
+  if(!L||!L.length)return '';
+  return `<div class="legend">${L.map(i=>{
+    if(i.cls)return `<span><i class="${i.cls}"></i>${i.label}</span>`;
+    if(i.dash)return `<span><i style="background:transparent;border-top:2px dashed var(--ink-3);height:0;vertical-align:3px"></i>${i.label}</span>`;
+    return `<span><i style="background:var(${i.color})"></i>${i.label}</span>`;}).join('')}</div>`;
+}
+const DEFAULT_LEGEND={
+  halves:()=>[{color:'--z-easy',label:'First half'},{color:'--accent',label:'Second half'}],
+  monthly_hr:f=>{const c=f.cap||155;return[{color:'--z-easy',label:`Month at or under ${c}`},{color:'--accent',label:`Over ${c}`},{dash:1,label:`Easy cap ${c}`}]},
+  start_split:()=>[{color:'--z-easy',label:'Negative split'},{color:'--accent',label:'Positive split'}],
+  zonebars:()=>[1,2,3,4,5].map(z=>({cls:'z'+z,label:'Z'+z})),
+  hr_dots:f=>{const c=f.cap||150;return[{color:'--z-easy',label:`At or under ${c}`},{color:'--bad',label:`Over ${c}`},{dash:1,label:`Easy cap ${c}`}]},
+  weekly_minutes:()=>null,
+  sleep_recovery:()=>[{color:'--good',label:'Green (67+)'},{color:'--warn',label:'Yellow (34–66)'},{color:'--bad',label:'Red (&lt;34)'}],
+  longrun:()=>[{color:'--z-easy',label:'Done'},{cls:'o',label:'Planned'},{color:'--warn',label:'Pull-back week'}]
+};
+
+const SECTION={
+  status:s=>s.html||'',
+  data:s=>(s.intro||'')+j(s.figures,figMarkup),
+  prediction:s=>(s.intro||'')
+    +(s.cards?`<div class="zones">${j(s.cards,c=>`<div class="zone ${c.cls||''}"><div class="k">${c.k}</div><div class="v">${c.v}</div><div class="s">${c.s||''}</div></div>`)}</div>`:'')
+    +(s.center_s?`<div class="fig" id="pred-band"><p class="ft">${s.band_title||'Where the estimate lands'}</p><svg viewBox="0 0 760 132"></svg></div>`:'')
+    +(s.basis?`<ul class="plain">${j(s.basis,b=>`<li>${b}</li>`)}</ul>`:'')
+    +(s.outro?`<p style="margin-top:12px;font-size:14px;color:var(--ink-2)">${s.outro}</p>`:''),
+  rules:s=>j(s.items,r=>`<div class="rule"><strong>${r.strong}</strong> ${r.text}</div>`),
+  zones:s=>(s.intro||'')+`<div class="zones">${j(s.cards,c=>`<div class="zone ${c.cls||''}"><div class="k">${c.k}</div><div class="v">${c.v}</div><div class="s">${c.s||''}</div></div>`)}</div>`,
+  calendar:s=>{
+    const legend=`Legend: ${pill('p-easy','easy')} ${pill('p-mp','marathon effort')} ${pill('p-thr','threshold')} ${pill('p-off','off')}`;
+    const intro=s.intro?`<p>${s.intro} ${legend}</p>`:`<p>${legend}</p>`;
+    const weeks=j(s.weeks,w=>`<div class="wk"><h3>${w.title}</h3><span class="tot">${w.tot||''}</span></div>
+  <div class="tbl"><table><thead><tr><th>Day</th><th>Run</th><th>HR</th><th>Notes</th><th>Done</th></tr></thead><tbody>${j(w.rows,r=>{
+      const cls=[r.key?'key':'',(w.pull||r.pull)?'pull':''].filter(Boolean).join(' ');
+      const done=r.done===true?pill('p-good','done'):r.done===false?pill('p-flag','missed'):(r.done||'');
+      return `<tr${cls?` class="${cls}"`:''}${r.date?` data-date="${r.date}"`:''}><td class="day">${r.day}</td><td>${r.run||''}</td><td class="num">${r.hr||''}</td><td>${r.notes||''}</td><td>${done}</td></tr>`;})}</tbody></table></div>`);
+    const outro=s.outro?`<p style="margin-top:12px;font-size:14px;color:var(--ink-2)">${s.outro}</p>`:'';
+    return intro+weeks+outro;},
+  road:s=>(s.figure?figMarkup(s.figure):'')+(s.bullets?`<ul class="plain">${j(s.bullets,b=>`<li>${b}</li>`)}</ul>`:''),
+  reviews:s=>(s.intro||'')+`<div class="card">${j(s.entries,e=>`<div class="entry"><div class="head"><span class="date">${e.date}</span><span class="title">${e.title||''}</span>${e.nums?`<span class="nums">${e.nums}</span>`:''}${e.pill?pill(e.pill.cls,e.pill.text):''}</div>${e.html||''}</div>`)}</div>`,
+  race:s=>(s.intro||'')+(s.rows?`<div class="tbl"><table><thead><tr><th>Miles</th><th>Section</th><th class="num">Pace</th><th class="num">HR</th><th>Notes</th></tr></thead><tbody>${j(s.rows,r=>`<tr><td class="num">${r.miles}</td><td>${r.section}</td><td class="num">${r.pace}</td><td class="num">${r.hr}</td><td>${r.notes||''}</td></tr>`)}</tbody></table></div>`:'')
+    +(s.fixed?`<h3>${s.fixed_title||'Race-day fixed points'}</h3><ul class="plain">${j(s.fixed,b=>`<li>${b}</li>`)}</ul>`:''),
+  open:s=>`<ul class="plain open">${j(s.items,i=>`<li>${i}</li>`)}</ul>`,
+  changelog:s=>`<ul class="plain log">${j(s.items,i=>`<li><strong>${i.date}</strong> — ${i.html}</li>`)}</ul>`
+};
+const DEFAULT_TITLE={status:'Where we are',data:'What the data says',prediction:'The prediction',rules:'The rules',zones:'Heart rate zones',calendar:'Calendar',road:'The road',reviews:'Run reviews',race:'Race plan',open:'Open items',changelog:'Changelog'};
+const DEFAULT_TOC={zones:'HR zones',prediction:'Prediction',race:'Race plan'};
+
+document.title=`${P.athlete} · ${R.short||R.name||''}`.trim();
+$('#app').innerHTML=`
+<div class="topbar"><span class="eight">8</span> ${P.club||'Lane 8 Track Club'} <span style="opacity:.55;font-weight:600">· Athlete page</span></div>
+<header class="hero"><div class="hero-in">
+  <div class="eyebrow">Shared working document · Updated ${P.updated||''}</div>
+  <div class="hero-top" style="margin-top:10px">
+    <h1>${P.athlete}<span>${R.name||''}</span></h1>
+    <div class="count" id="count" aria-label="Countdown to race day"><div><b id="c-days">—</b><small>days</small></div><div><b id="c-hrs">—</b><small>hours</small></div><div><b id="c-min">—</b><small>min</small></div></div>
+  </div>
+  ${P.lede?`<p class="lede">${P.lede}</p>`:''}
+  ${P.course?`<div class="course" id="course"><svg viewBox="0 0 1000 220" preserveAspectRatio="none" aria-label="${esc(P.course.aria||(R.name+' course profile with race plan segments'))}"></svg><div class="cap">${P.course.caption||''}</div><div class="tip" id="ctip"></div></div>`:''}
+</div></header>
+<div class="wrap">
+  ${P.stats?`<div class="strip">${j(P.stats,s=>`<div class="stat"><div class="k">${s.k}</div><div class="v"${s.v_style?` style="${s.v_style}"`:''}>${s.v}</div><div class="s">${s.s||''}</div></div>`)}</div>`:''}
+  <nav class="toc">${present.map(id=>`<a href="#${id}">${sec(id).toc||DEFAULT_TOC[id]||sec(id).title||DEFAULT_TITLE[id]}</a>`).join('')}</nav>
+  ${present.map(id=>`<section id="${id}"><h2>${sec(id).title||DEFAULT_TITLE[id]}</h2>${SECTION[id]?SECTION[id](sec(id)):(sec(id).html||'')}</section>`).join('')}
+  ${P.footer?`<footer>${P.footer}</footer>`:''}
+</div>`;
+
+/* ================= BEHAVIOUR ================= */
+/* countdown */
+if(R.start_iso){const race=new Date(R.start_iso);
+  const tick=()=>{const d=Math.max(0,race-Date.now());$('#c-days').textContent=Math.floor(d/864e5);$('#c-hrs').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');$('#c-min').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');};
+  tick();setInterval(tick,30000);}
+/* today marker */
+try{const t=new Date();const iso=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');const row=document.querySelector(`tr[data-date="${iso}"]`);if(row)row.classList.add('today');}catch(e){}
+
+/* course profile */
+if(P.course&&P.course.elev){const C=P.course,ELEV=C.elev,SEG=C.segments||[];
+  const svg=$('#course svg'),W=1000,H=220,padB=34,padT=40,maxFt=C.max_ft||190;
+  const x=m=>m/DIST*W,y=f=>H-padB-(f/maxFt)*(H-padB-padT);
+  const bands=el('g',{},svg);
+  SEG.forEach((s,i)=>el('rect',{x:x(s.a),y:0,width:x(s.b)-x(s.a),height:H,fill:i%2?'#FFFFFF':'#000000',opacity:i%2?.035:.12},bands));
+  let d='M'+x(0)+','+(H-padB);ELEV.forEach(p=>d+=' L'+x(p[0]).toFixed(1)+','+y(p[1]).toFixed(1));d+=' L'+x(DIST)+','+(H-padB)+' Z';
+  el('path',{d,fill:'#FFE600',opacity:.22},svg);
+  let l='';ELEV.forEach((p,i)=>l+=(i?' L':'M')+x(p[0]).toFixed(1)+','+y(p[1]).toFixed(1));
+  el('path',{d:l,fill:'none',stroke:'#FFE600','stroke-width':2.2,'stroke-linejoin':'round'},svg);
+  for(let m=0;m<=Math.floor(DIST);m+=2){el('line',{x1:x(m),x2:x(m),y1:H-padB,y2:H-padB+5,stroke:'#8C8B83','stroke-width':1},svg);txt(svg,{x:x(m),y:H-padB+17,'text-anchor':'middle',fill:'#8C8B83','font-size':'10','font-family':'IBM Plex Mono, monospace'},m);}
+  let lmPrev=-99,lmRow=0;
+  [...(C.landmarks||[])].sort((a,b)=>a[0]-b[0]).forEach(([m,n])=>{lmRow=(m-lmPrev<1.8)?1-lmRow:0;lmPrev=m;
+    txt(svg,{x:x(m),y:padT-14+lmRow*12,'text-anchor':m>DIST-1.2?'end':m<1?'start':'middle',fill:'#D8D7CF','font-size':'10.5','letter-spacing':'.06em','font-family':'IBM Plex Mono, monospace'},n.toUpperCase());
+    el('line',{x1:x(m),x2:x(m),y1:padT-10,y2:H-padB,stroke:'#D8D7CF','stroke-width':1,opacity:.25,'stroke-dasharray':'2 4'},svg);});
+  if(C.decision){const dm=C.decision.mile,df=C.decision.ft!==undefined?C.decision.ft:(ELEV.find(p=>p[0]>=dm)||[0,0])[1];
+    el('circle',{cx:x(dm),cy:y(df),r:5,fill:'#141412',stroke:'#FFE600','stroke-width':2.5},svg);
+    txt(svg,{x:x(dm)+9,y:y(df)-8,fill:'#F3F5F4','font-size':'11','font-family':'Barlow, sans-serif'},C.decision.label||('Decision: mile '+dm));}
+  const tip=$('#ctip'),box=$('#course');const hot=el('rect',{x:0,y:0,width:W,height:H,fill:'transparent'},svg);let cur=-1;
+  hot.addEventListener('mousemove',ev=>{const r=svg.getBoundingClientRect();const mi=(ev.clientX-r.left)/r.width*DIST;const i=SEG.findIndex(s=>mi>=s.a&&mi<s.b);if(i<0)return;
+    if(i!==cur){cur=i;[...bands.children].forEach((b,k)=>b.setAttribute('opacity',k===i?(k%2?.14:.3):(k%2?.035:.12)));const s=SEG[i];
+      tip.innerHTML=`<b>${s.name}</b>${s.pace}/mi · HR ${s.hr}<br><span style="white-space:normal;display:block;max-width:220px;color:#4A4944">${s.note||''}</span>`;}
+    const br=box.getBoundingClientRect();tip.style.left=(ev.clientX-br.left)+'px';tip.style.top=(ev.clientY-br.top-10)+'px';tip.classList.add('on');});
+  hot.addEventListener('mouseleave',()=>{tip.classList.remove('on');cur=-1;[...bands.children].forEach((b,k)=>b.setAttribute('opacity',k%2?.035:.12));});
+}
+
+/* shared tooltip */
+function mkTip(fig){const t=document.createElement('div');t.className='tip light';fig.appendChild(t);return{
+  show(ev,html){t.innerHTML=html;const r=fig.getBoundingClientRect();t.style.left=(ev.clientX-r.left)+'px';t.style.top=(ev.clientY-r.top-8)+'px';t.classList.add('on');},
+  hide(){t.classList.remove('on');}};}
+const hover=(node,tip,html)=>{node.addEventListener('mousemove',ev=>tip.show(ev,html));node.addEventListener('mouseleave',tip.hide);};
+/* generic annotations: [{x,y,text,anchor,dx,dy}] in data coords */
+const annots=(svg,list,x,y)=>(list||[]).forEach(a=>txt(svg,{x:x(a.x)+(a.dx||0),y:y(a.y)+(a.dy===undefined?4:a.dy),'text-anchor':a.anchor||'start',class:'ann'},a.text));
+const gridY=(svg,vals,x1,x2,y,fmt=v=>v,L)=>{const g=el('g',{class:'grid'},svg);vals.forEach(v=>{el('line',{x1,x2,y1:y(v),y2:y(v)},g);txt(svg,{x:L-8,y:y(v)+4,'text-anchor':'end'},fmt(v));});return g;};
+
+/* ================= FIGURE KINDS ================= */
+const KINDS={
+  /* first half vs second half per race: data [[name, secPerMiFirst, secPerMiSecond, note]] */
+  halves(f,svg,tip){const D=f.data,W=760,H=250,L=46,Rr=12,T=16,B=44,pw=W-L-Rr,ph=H-T-B;
+    const lo=f.lo||420,hi=f.hi||720,y=v=>T+ph*(1-(v-lo)/(hi-lo));gridY(svg,f.ticks||[450,510,570,630,690],L,W-Rr,y,mmss,L);
+    const gw=pw/D.length,bw=Math.min(30,gw*.3);
+    D.forEach((r,i)=>{const cx=L+gw*i+gw/2;
+      [[r[1],css('--z-easy'),-bw-1,'First half'],[r[2],css('--accent'),1,'Second half']].forEach(b=>{
+        const rect=el('rect',{x:cx+b[2],y:y(b[0]),width:bw,height:y(lo)-y(b[0]),rx:3,fill:b[1]},svg);hover(rect,tip,`<b>${r[0]} · ${b[3]}</b>${mmss(b[0])}/mi · ${r[3]||''}`);
+        txt(svg,{x:cx+b[2]+bw/2,y:y(b[0])-5,'text-anchor':'middle'},mmss(b[0]));});
+      txt(svg,{x:cx,y:H-B+16,'text-anchor':'middle',class:'ann'},r[0]);txt(svg,{x:cx,y:H-B+30,'text-anchor':'middle'},(r[3]||'').split(' · ')[0]);});
+    el('line',{x1:L,x2:W-Rr,y1:y(lo),y2:y(lo),stroke:css('--line')},svg);},
+
+  /* median easy-run HR by month: data [[label, median, pctOver]] */
+  monthly_hr(f,svg,tip){const D=f.data,W=760,H=230,L=46,Rr=12,T=16,B=34,pw=W-L-Rr,ph=H-T-B,cap=f.cap||155;
+    const lo=f.lo||148,hi=f.hi||164,y=v=>T+ph*(1-(v-lo)/(hi-lo));gridY(svg,f.ticks||[150,155,160],L,W-Rr,y,v=>v,L);
+    const gw=pw/D.length,bw=Math.min(34,gw*.6);
+    D.forEach((m,i)=>{const cx=L+gw*i+gw/2,over=m[1]>cap;const rect=el('rect',{x:cx-bw/2,y:y(m[1]),width:bw,height:y(lo)-y(m[1]),rx:3,fill:over?css('--accent'):css('--z-easy')},svg);
+      hover(rect,tip,`<b>${m[0]}</b>median ${m[1]} bpm · ${m[2]}% ${f.pct_label||'of easy miles over cap'}`);txt(svg,{x:cx,y:y(m[1])-6,'text-anchor':'middle'},m[2]+'%');txt(svg,{x:cx,y:H-B+16,'text-anchor':'middle'},m[0]);});
+    el('line',{x1:L,x2:W-Rr,y1:y(cap),y2:y(cap),stroke:css('--ink-3'),'stroke-dasharray':'4 4','stroke-width':1.5},svg);el('line',{x1:L,x2:W-Rr,y1:y(lo),y2:y(lo),stroke:css('--line')},svg);},
+
+  /* long-run start time vs second-half delta: data [[date, startHourDecimal, firstMilesHR, secPerMiDelta]] */
+  start_split(f,svg,tip){const D=f.data,W=760,H=250,L=46,Rr=12,T=18,B=36,pw=W-L-Rr,ph=H-T-B;
+    const xmin=f.xmin||5,xmax=f.xmax||16.5,ymn=f.ymin||-80,ymx=f.ymax||60,rs=f.race_start_hour||8;
+    const x=h=>L+pw*(h-xmin)/(xmax-xmin),y=v=>T+ph*(1-(v-ymn)/(ymx-ymn));const g=el('g',{class:'grid'},svg);
+    (f.ticks||[-60,-30,0,30,60]).forEach(v=>{el('line',{x1:L,x2:W-Rr,y1:y(v),y2:y(v),stroke:v===0?css('--ink-3'):undefined},v===0?svg:g);txt(svg,{x:L-8,y:y(v)+4,'text-anchor':'end'},(v>0?'+':'')+v+' s');});
+    for(let h=Math.ceil(xmin/2)*2;h<=xmax;h+=2)txt(svg,{x:x(h),y:H-B+16,'text-anchor':'middle'},h>12?(h-12)+' PM':h+' AM');
+    el('line',{x1:x(rs),x2:x(rs),y1:T,y2:y(ymn),stroke:css('--ink'),'stroke-dasharray':'4 4'},svg);txt(svg,{x:x(rs)+6,y:T+10,class:'ann'},(rs>12?rs-12+' PM':rs+' AM')+' — race start');
+    txt(svg,{x:W-Rr,y:y(ymn)-8,'text-anchor':'end'},'below the line = faster second half');
+    D.forEach(r=>{const c=el('circle',{cx:x(r[1]),cy:y(r[3]),r:6.5,fill:r[3]<0?css('--z-easy'):css('--accent'),stroke:css('--surface'),'stroke-width':2},svg);
+      hover(c,tip,`<b>${r[0]}</b>start ${Math.floor(r[1])}:${String(Math.round((r[1]%1)*60)).padStart(2,'0')} · first 3 mi HR ${r[2]} · 2nd half ${r[3]>0?'+':''}${r[3]} s/mi`);});
+    annots(svg,f.annotations,x,y);},
+
+  /* time-in-zone bars: data [[dateLabel, runName, [z1..z5 pct], tag]] */
+  zonebars(f,box){const D=f.data;D.forEach(([d,n,z])=>{
+    const lab=document.createElement('div');lab.className='lab';lab.innerHTML=`${n}<small>${d}</small>`;
+    const bar=document.createElement('div');bar.className='bar';z.forEach((v,i)=>{if(v>0){const s=document.createElement('i');s.className='z'+(i+1);s.style.flex=v;s.title=`Z${i+1} ${v}%`;bar.appendChild(s);}});
+    const pct=document.createElement('div');pct.className='pct';const easy=z[0]+z[1];pct.textContent=easy+'% Z1–2';pct.style.color=easy>=(f.good||80)?css('--good'):easy>=(f.warn||60)?css('--warn'):css('--bad');
+    box.append(lab,bar,pct);});},
+
+  /* average HR per run over time: data [[isoDate, minutes, avgHR]] */
+  hr_dots(f,svg,tip){const D=f.data,W=760,H=240,L=40,Rr=12,T=14,B=30,cap=f.cap||150,lo=f.lo||120,hi=f.hi||165;
+    const t0=Date.parse(f.t0),t1=Date.parse(f.t1);const x=d=>L+(Date.parse(d)-t0)/(t1-t0)*(W-L-Rr),y=v=>T+(1-(v-lo)/(hi-lo))*(H-T-B);
+    gridY(svg,f.ticks||[120,130,140,150,160],L,W-Rr,y,v=>v,L);
+    (f.months||[]).forEach(([d,n])=>txt(svg,{x:x(d),y:H-8,'text-anchor':'start'},n));
+    el('line',{x1:L,x2:W-Rr,y1:y(cap),y2:y(cap),stroke:css('--ink-3'),'stroke-width':1.5,'stroke-dasharray':'4 4'},svg);txt(svg,{x:W-Rr,y:y(cap)-6,'text-anchor':'end',class:'ann'},'easy cap '+cap);
+    D.forEach(([d,m,hr])=>{const over=hr>cap,r=Math.max(4,Math.min(11,Math.sqrt(m)*0.9));const dot=el('circle',{cx:x(d),cy:y(hr),r,fill:over?css('--bad'):css('--z-easy'),stroke:css('--surface'),'stroke-width':2,opacity:.92},svg);hover(dot,tip,`<b>${d}</b>${hr} avg · ${m} min`);});
+    annots(svg,f.annotations,x,y);},
+
+  /* minutes per week: data [[weekLabel, minutes]]; month_marks [[index,label]] */
+  weekly_minutes(f,svg,tip){const D=f.data,W=760,H=220,L=40,Rr=12,T=14,B=30,n=D.length,bw=(W-L-Rr)/n,max=f.max||340;
+    const y=v=>T+(1-v/max)*(H-T-B),x=i=>L+i*bw;gridY(svg,f.ticks||[100,200,300],L,W-Rr,y,v=>v,L);
+    D.forEach(([w,v],i)=>{const x0=x(i)+1,h=Math.max(0,y(0)-y(v)),last=f.last_in_progress!==false&&i===n-1;
+      const rect=el('rect',{x:x0,y:y(v),width:bw-2,height:h,rx:3,fill:last?css('--z-easy-soft'):css('--z-easy'),stroke:last?css('--z-easy'):'none','stroke-dasharray':last?'3 2':'none'},svg);
+      if(h>0)el('rect',{x:x0,y:y(0)-2,width:bw-2,height:2,fill:last?css('--z-easy-soft'):css('--z-easy')},svg);hover(rect,tip,`<b>week of ${w}</b>${v} min${last?' · in progress':''}`);});
+    (f.month_marks||[]).forEach(([i,n])=>txt(svg,{x:x(i)+1,y:H-8},n));
+    annots(svg,f.annotations,i=>x(i)+bw/2,y);},
+
+  /* sleep vs recovery: data [[sleepMinutes, recoveryPct, label?]] */
+  sleep_recovery(f,svg,tip,fig){const D=f.data,W=760,H=240,L=40,Rr=12,T=14,B=30,hmin=f.hmin||3.5,hmax=f.hmax||8.5,bad=f.bad_under_h||6;
+    const x=m=>L+(m/60-hmin)/(hmax-hmin)*(W-L-Rr),y=v=>T+(1-v/100)*(H-T-B);gridY(svg,[0,33,66,100],L,W-Rr,y,v=>v+'%',L);
+    for(let h=Math.ceil(hmin);h<=hmax;h++){el('line',{x1:x(h*60),x2:x(h*60),y1:T,y2:H-B,stroke:css('--grid')},svg);txt(svg,{x:x(h*60),y:H-8,'text-anchor':'middle'},h+'h');}
+    el('rect',{x:L,y:T,width:x(bad*60)-L,height:H-T-B,fill:css('--bad'),opacity:.06},svg);txt(svg,{x:x(bad*60)-8,y:T+14,'text-anchor':'end',class:'ann'},'under '+bad+' h');
+    D.forEach(([m,r,label])=>{const col=r>=67?css('--good'):r>=34?css('--warn'):css('--bad');const dot=el('circle',{cx:x(m),cy:y(r),r:label?7:5,fill:col,stroke:label?css('--ink'):css('--surface'),'stroke-width':label?2:1.5,opacity:.9},svg);hover(dot,tip,`<b>${label||'one night'}</b>${(m/60).toFixed(1)} h → ${r}% recovery`);});
+    annots(svg,f.annotations,x,y);},
+
+  /* long-run progression: data [[label, miles, status]] status: done|plan|pull|prov|pullprov|race */
+  longrun(f,svg,tip){const D=f.data,W=760,H=230,L=40,Rr=12,T=16,B=40,n=D.length,bw=(W-L-Rr)/n,pad=f.pad||6,max=f.max||27;
+    const y=v=>T+(1-v/max)*(H-T-B);gridY(svg,f.ticks||[10,20,26.2],L,W-Rr,y,v=>v,L);
+    D.forEach(([d,mi,st],i)=>{const x0=L+i*bw+pad,w=bw-2*pad,h=y(0)-y(mi);const done=st==='done',pull=st.startsWith('pull'),prov=st.includes('prov'),race=st==='race';
+      const fill=done?css('--z-easy'):race?css('--brand'):pull?css('--warn-soft'):'transparent';const stroke=pull?css('--warn'):race?css('--ink'):css('--z-easy');
+      const r=el('rect',{x:x0,y:y(mi),width:w,height:h,rx:3,fill,stroke,'stroke-width':2,'stroke-dasharray':prov?'4 3':'none',opacity:race?.85:1},svg);
+      txt(svg,{x:x0+w/2,y:y(mi)-6,'text-anchor':'middle',class:'ann'},race?String(DIST):(Number.isInteger(mi)?mi:(f.round_labels?Math.round(mi):mi)));
+      txt(svg,{x:x0+w/2,y:H-B+16,'text-anchor':'middle','font-size':n>14?'10':undefined},d);
+      hover(r,tip,`<b>${d}</b>${mi} mi · ${done?'done':race?'race day':pull?'pull-back':prov?'provisional':'planned'}`);});
+    if(f.taper_at!==undefined)txt(svg,{x:L+f.taper_at*bw,y:H-4,'text-anchor':'middle'},'TAPER');}
+};
+
+function renderFig(f){const fig=document.getElementById(f.id);if(!fig||!KINDS[f.kind]){console.warn('unknown figure',f);return;}
+  if(f.kind==='zonebars')return KINDS.zonebars(f,$('#'+f.id+'-bars'));
+  KINDS[f.kind](f,$('svg',fig),mkTip(fig),fig);}
+(sec('data').figures||[]).forEach(renderFig);if(sec('road').figure)renderFig(sec('road').figure);
+/* prediction band bar: times in seconds, smaller = faster = left */
+(function(){const s=sec('prediction');if(!s.center_s)return;const fig=document.getElementById('pred-band');if(!fig)return;
+  const svg=$('svg',fig),tip=mkTip(fig),W=760,L=28,Rr=28,yc=66;
+  const F=t=>{const m=Math.round(t/60);return Math.floor(m/60)+':'+String(m%60).padStart(2,'0');};
+  const vals=[s.band_s[0],s.band_s[1],s.center_s].concat(s.goal_s!==undefined?[s.goal_s]:[]);
+  const lo=Math.min(...vals)-240,hi=Math.max(...vals)+240,x=t=>L+(t-lo)/(hi-lo)*(W-L-Rr);
+  txt(svg,{x:L,y:14,class:'ann'},'\u2190 faster');txt(svg,{x:W-Rr,y:14,'text-anchor':'end',class:'ann'},'slower \u2192');
+  el('line',{x1:L,x2:W-Rr,y1:yc,y2:yc,stroke:css('--line'),'stroke-width':1.5},svg);
+  const b=el('rect',{x:x(s.band_s[0]),y:yc-14,width:x(s.band_s[1])-x(s.band_s[0]),height:28,rx:5,fill:css('--z-easy-soft'),stroke:css('--z-easy'),'stroke-width':1.5},svg);
+  hover(b,tip,`<b>68% band</b>${F(s.band_s[0])}\u2013${F(s.band_s[1])} \u00b7 two of three runners land inside`);
+  txt(svg,{x:x(s.band_s[0]),y:yc+34,'text-anchor':'middle'},F(s.band_s[0]));
+  txt(svg,{x:x(s.band_s[1]),y:yc+34,'text-anchor':'middle'},F(s.band_s[1]));
+  el('line',{x1:x(s.center_s),x2:x(s.center_s),y1:yc-24,y2:yc+24,stroke:css('--ink'),'stroke-width':2.5},svg);
+  txt(svg,{x:x(s.center_s),y:yc-32,'text-anchor':'middle','font-weight':'700','font-size':'13',class:'ann'},F(s.center_s)+' estimate');
+  if(s.goal_s!==undefined){el('line',{x1:x(s.goal_s),x2:x(s.goal_s),y1:yc-24,y2:yc+24,stroke:css('--accent'),'stroke-width':2.5,'stroke-dasharray':'5 3'},svg);
+    txt(svg,{x:x(s.goal_s),y:yc+52,'text-anchor':'middle',class:'ann',style:'fill:var(--accent);font-weight:700'},(s.goal_label||'goal')+' '+F(s.goal_s));}
+})();
+})();
+</script>
