@@ -1,0 +1,379 @@
+<title>Aiden Mizrahi · Philly 2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#FCFCFA; --surface:#FFFFFF; --surface-2:#F0EFE9; --ink:#141412; --ink-2:#4A4944; --ink-3:#82817A; --line:#E4E3DC; --grid:#F0EFE9;
+  --brand:#FFE600; --brand-ink:#141412;
+  --accent:#9C7F00; --accent-soft:#FFF7B3; --good:#2E7D4F; --good-soft:#E6F3EA; --warn:#9A6B00; --warn-soft:#FBF1D6; --bad:#C0392B; --bad-soft:#FBE5E2;
+  --z-easy:#2F5FA8; --z-easy-soft:#DCE6F5; --z-mp:#2E7D4F; --z-thr:#C0392B; --z5:#7A1F14;
+  --hero-ink:#F1F0EA; --hero-bg:#141412;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121211; --surface:#1B1B19; --surface-2:#232321; --ink:#F1F0EA; --ink-2:#C4C3BB; --ink-3:#8C8B83; --line:#2C2C29; --grid:#232321;
+    --brand:#FFE600; --brand-ink:#141412;
+    --accent:#E8D200; --accent-soft:#332F0D; --good:#6FCB8E; --good-soft:#17301F; --warn:#E8B93A; --warn-soft:#332A0D; --bad:#F0806F; --bad-soft:#3A1A15;
+    --z-easy:#5B8DE0; --z-easy-soft:#1B2A45; --z-mp:#6FCB8E; --z-thr:#F0806F; --z5:#F7B3A6;
+    --hero-ink:#F1F0EA; --hero-bg:#0E0E0D;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121211; --surface:#1B1B19; --surface-2:#232321; --ink:#F1F0EA; --ink-2:#C4C3BB; --ink-3:#8C8B83; --line:#2C2C29; --grid:#232321;
+    --brand:#FFE600; --brand-ink:#141412;
+    --accent:#E8D200; --accent-soft:#332F0D; --good:#6FCB8E; --good-soft:#17301F; --warn:#E8B93A; --warn-soft:#332A0D; --bad:#F0806F; --bad-soft:#3A1A15;
+    --z-easy:#5B8DE0; --z-easy-soft:#1B2A45; --z-mp:#6FCB8E; --z-thr:#F0806F; --z5:#F7B3A6;
+    --hero-ink:#F1F0EA; --hero-bg:#0E0E0D;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Barlow","Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Impact,sans-serif;text-wrap:balance;margin:0;line-height:1.02}
+h2{font-size:32px;font-weight:600;margin:0 0 14px}
+h3{font-size:20px;font-weight:600;margin:20px 0 8px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+
+/* TOPBAR */
+.topbar{background:var(--brand);color:var(--brand-ink);padding:14px 20px;display:flex;align-items:center;gap:14px;font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:14px}
+.topbar .eight{width:30px;height:30px;border-radius:50%;background:#141412;color:#FFE600;display:grid;place-items:center;font-size:18px;font-weight:800}
+/* HERO */
+.hero{background:var(--hero-bg);color:var(--hero-ink);position:relative;overflow:hidden}
+.hero-in{max-width:980px;margin:0 auto;padding:36px 20px 0;position:relative}
+.hero .eyebrow{color:#B3B2A8}
+.hero-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 40px}
+.hero h1{font-size:clamp(44px,8vw,84px);font-weight:800;letter-spacing:-.015em;text-transform:uppercase;line-height:.92}
+.hero h1 span{display:block;color:#FFE600}
+.count{display:grid;grid-template-columns:repeat(3,auto);gap:22px;font-variant-numeric:tabular-nums}
+.count div{display:flex;flex-direction:column;align-items:flex-start}
+.count b{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:clamp(38px,6vw,64px);line-height:1}
+.count small{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B3B2A8}
+.hero p.lede{margin:16px 0 0;max-width:60ch;color:#D8D7CF;font-size:16.5px}
+.course{margin:22px -20px 0;position:relative}
+.course svg{display:block;width:100%;height:auto}
+.course .cap{display:block;text-align:right;padding:4px 20px 10px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#8C8B83}
+.tip{position:absolute;pointer-events:none;background:#FFE600;color:#141412;font-size:12.5px;line-height:1.35;padding:8px 10px;border-radius:4px;box-shadow:0 4px 18px rgba(0,0,0,.35);opacity:0;transform:translate(-50%,-110%);transition:opacity .12s;max-width:230px;z-index:5;white-space:nowrap}
+.tip b{font-family:"IBM Plex Mono",monospace;font-weight:500;display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4A4944;margin-bottom:2px}
+.tip.on{opacity:1}
+.tip.light{background:var(--surface);color:var(--ink);box-shadow:0 4px 18px rgba(0,0,0,.18);border:1px solid var(--line)}
+.tip.light b{color:var(--ink-2)}
+
+/* BODY */
+.wrap{max-width:820px;margin:0 auto;padding:28px 20px 80px}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:0;overflow:hidden;margin:0 0 30px}
+.stat{background:var(--surface);padding:14px 16px}
+.stat .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.stat .v{font-family:"Barlow Condensed",sans-serif;font-size:34px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}
+.stat .s{font-size:13px;color:var(--ink-2)}
+nav.toc{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 44px;font-size:14px}
+nav.toc a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--accent);border-color:var(--accent);outline:none}
+section{margin:0 0 56px}
+section p{max-width:66ch}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.rule{border-left:4px solid var(--brand);padding:2px 0 2px 14px;margin:14px 0;max-width:66ch}
+.rule strong{font-weight:600}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px;border-top:1px solid var(--line);vertical-align:top}
+thead th{border-top:0;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+td.num,th.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td.day{white-space:nowrap;font-weight:500}
+tr.key td{background:var(--accent-soft)}
+tr.pull td{background:var(--warn-soft)}
+tr.today td{box-shadow:inset 4px 0 0 var(--brand)}
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11.5px;padding:2px 8px;border-radius:3px;white-space:nowrap;letter-spacing:.02em}
+.p-easy{background:color-mix(in srgb,var(--z-easy) 15%,transparent);color:var(--z-easy)}
+.p-mp{background:color-mix(in srgb,var(--z-mp) 15%,transparent);color:var(--z-mp)}
+.p-thr{background:color-mix(in srgb,var(--z-thr) 15%,transparent);color:var(--z-thr)}
+.p-off{background:var(--line);color:var(--ink-2)}
+.p-good{background:var(--good-soft);color:var(--good)}
+.p-warn{background:var(--warn-soft);color:var(--warn)}
+.p-flag{background:var(--bad-soft);color:var(--bad)}
+.wk{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:22px 0 8px}
+.wk h3{margin:0}
+.wk .tot{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--ink-2)}
+.entry{border-top:1px solid var(--line);padding:16px 0}
+.entry:first-of-type{border-top:0;padding-top:0}
+.entry .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:6px}
+.entry .date{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-2)}
+.entry .title{font-weight:600}
+.entry .nums{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-2)}
+.entry p{margin:6px 0 0;font-size:15px}
+.entry ul{margin:6px 0 0;padding-left:18px;font-size:15px}
+.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.zone{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;border-top:3px solid var(--line)}
+.zone.easy{border-top-color:var(--z-easy)}.zone.mp{border-top-color:var(--z-mp)}.zone.thr{border-top-color:var(--z-thr)}
+.zone .k{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.zone .v{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}
+.zone .s{font-size:13px;color:var(--ink-2)}
+ul.plain{padding-left:18px;margin:8px 0}
+ul.plain li{margin:4px 0;max-width:64ch}
+.open li{margin:6px 0}
+.log{font-size:14px;color:var(--ink-2)}
+.log li{margin:3px 0}
+footer{margin-top:40px;font-size:13px;color:var(--ink-2);border-top:1px solid var(--line);padding-top:14px}
+
+/* FIGURES */
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px 18px 12px;margin:16px 0;position:relative}
+.fig .ft{font-weight:600;font-size:15px;margin:0 0 2px}
+.fig .fs{font-size:13px;color:var(--ink-2);margin:0 0 10px;max-width:70ch}
+.fig svg{display:block;width:100%;height:auto;overflow:visible}
+.fig .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2);margin:8px 0 0}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.legend i.o{background:transparent;border:2px solid var(--z-easy);box-sizing:border-box}
+.fig text{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;fill:var(--ink-2)}
+.fig text.ann{font-family:"Barlow",sans-serif;font-size:12px;fill:var(--ink)}
+.fig .grid line{stroke:var(--grid);stroke-width:1}
+.fig .axis line{stroke:var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.zbars{display:grid;grid-template-columns:130px 1fr 60px;gap:8px 12px;align-items:center;font-size:13.5px}
+.zbars .lab{font-weight:500;white-space:nowrap}
+.zbars .lab small{display:block;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--ink-2);font-weight:400}
+.zbars .bar{display:flex;gap:2px;height:16px}
+.zbars .bar i{display:block;height:100%;border-radius:2px}
+.zbars .pct{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-2);text-align:right;white-space:nowrap}
+.z1{background:var(--z-easy-soft)}.z2{background:var(--z-easy)}.z3{background:var(--z-mp)}.z4{background:var(--z-thr)}.z5{background:var(--z5)}
+@media (max-width:560px){.stat .v{font-size:28px}.zbars{grid-template-columns:100px 1fr 52px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+<div id="app"></div>
+<script id="page-data" type="application/json">{"athlete":"Aiden Mizrahi","slug":"aiden-mizrahi-philly-2026","artifact_url":"https://claude.ai/artifact/HtYmjncjQjoFdEaNAHwyib","public_url":"https://themesong.github.io/lane8-pages/aiden-mizrahi-philly-2026.html","updated":"Mon Oct 5, 2026","race":{"name":"Philadelphia Marathon 2026","short":"Philly 2026","start_iso":"2026-11-22T07:00:00-05:00","distance":26.2},"lede":"Sunday, November 22, 7:00 AM. Art Museum, through the city, out Kelly Drive to Manayunk and back. Your first marathon. The engine is real — a 19:54 5K and a resting heart rate that's dropped eight beats since spring. The next seven weeks are about three things: easy days actually easy, long runs outside in the morning, and arriving at the start line healthy.","stats":[{"k":"Philly target","v":"3:20–3:25","v_style":"font-size:30px;white-space:nowrap","s":"≈ 7:40–7:50/mi · HR-governed to mile 20"},{"k":"Longest run","v":"18 mi","s":"Sep 25 · 8:15 at 156 avg"},{"k":"This week","v":"~32 mi","s":"5 · XC+3 · 6 · off · 10 · off · 5K race"},{"k":"5K","v":"19:54","s":"cross country · next: Oct 11 meet"},{"k":"Resting HR","v":"52–54","s":"was ~60 in spring"},{"k":"Big goal","v":"sub-3","s":"Long Island, May 2027"}],"course":{"aria":"Philadelphia Marathon course profile with race plan segments","caption":"Philadelphia Marathon elevation · ~650 ft gain · approximate profile from findmymarathon.com and course maps · hover for the plan","max_ft":160,"elev":[[0,42],[0.3,38],[0.6,35],[1,32],[1.5,30],[2,28],[2.5,25],[3,22],[3.5,20],[4,22],[4.5,25],[5,30],[5.5,35],[6,40],[6.3,30],[6.6,45],[7,95],[7.3,130],[7.6,110],[8,80],[8.5,60],[9,75],[9.3,120],[9.6,135],[10,110],[10.4,70],[10.8,40],[11.2,30],[12,30],[12.5,35],[13,40],[13.5,35],[14,30],[15,30],[16,32],[17,35],[18,40],[18.5,55],[19,75],[19.4,90],[19.8,85],[20.2,70],[20.6,50],[21,40],[22,35],[23,32],[24,30],[25,30],[25.8,32],[26,40],[26.2,48]],"landmarks":[[0,"Art Museum"],[3.5,"Old City"],[7.3,"University City"],[9.5,"Fairmount Park"],[13,"Art Museum"],[16,"Kelly Drive"],[19.6,"Manayunk"],[26.2,"Finish"]],"decision":{"mile":20,"ft":70,"label":"Decision: mile 20"},"segments":[{"a":0,"b":6,"name":"Center City · mi 1–6","pace":"7:50–8:00","hr":"≤165","note":"Flat and crowded. The whole race is decided by not racing here. Nothing under 7:45."},{"a":6,"b":10.5,"name":"University City + Fairmount hills · mi 7–10","pace":"by HR","hr":"≤168","note":"The two real climbs, at ~7 and ~9.5. Let the pace drift; hold the heart rate."},{"a":10.5,"b":13.1,"name":"Downhill to the Art Museum · mi 11–13","pace":"7:45","hr":"≤168","note":"Half in ~1:42–1:44. Gel at every 30 min."},{"a":13.1,"b":20,"name":"Kelly Drive out to Manayunk · mi 14–20","pace":"7:40–7:45","hr":"165–172","note":"Flat, then a rise into Manayunk. The loudest crowd on the course — don't surge for it."},{"a":20,"b":26.2,"name":"Back down Kelly Drive · mi 21–26.2","pace":"7:35 →","hr":"open","note":"If HR was under 168 at 20, this is yours. Small uphill in the last 500 ft."}]},"section_order":["status","data","rules","zones","calendar","road","reviews","race","fueling","open","changelog"],"sections":{"status":{"title":"Where we are","html":"<p>Seven weeks out, and the fitness question has a good answer. A 19:54 cross-country 5K, a resting heart rate down from about 60 to 52–54 since spring, and three long runs (14, 16, 18) run under control at 152–156 average heart rate. That is a real aerobic base for a first marathon.<\/p><p>Two things need fixing, and both are habits, not fitness. First, <strong>easy days aren't easy<\/strong>: half of your easy runs since July averaged 159–172, and on Sep 9 you ran 6:54 and 6:25 miles two days before a 17-miler. Second, <strong>some long runs turn into races<\/strong>: Aug 30 (165 avg), Sep 11 (167 avg), and Oct 2 (166 avg, with miles at 175–180). The ones that went well were the ones that started early and stayed under 158.<\/p><p>Straight answer on sub-3:15: your 5K says it's not crazy on paper. It's not the plan for your first marathon on 35 miles a week with an ankle that acts up. <strong>Philly is 3:20–3:25, run by heart rate to mile 20, then open.<\/strong> It's the race where you learn the distance — fueling, pacing, the last 10K. Sub-3 at Long Island in May is the big goal, and a well-run Philly is what makes it possible.<\/p><p><strong>Right now:<\/strong> the right ankle decides the week. Log it 0–10 after every run. Any pain during a run or the next morning is an easy day off.<\/p>"},"data":{"title":"What the data says","intro":"<p>From your Strava archive (Aug 2025 → Oct 2026) and the heart rate your Apple Watch recorded. Hover for the numbers.<\/p>","figures":[{"id":"fig-long-halves","kind":"halves","title":"Long runs: first half vs. second half","sub":"Pace per mile while moving. A taller second bar means you slowed down. Sep 6 (easy, 152 avg) is the template. Sep 25 slowed while heart rate dropped — legs and fuel, not the engine.","lo":420,"hi":620,"ticks":[450,480,510,540,570,600],"data":[["Aug 16 · 14","533","538","8:56 avg · HR 152 · controlled"],["Aug 30 · 14","481","522","8:20 avg · HR 165 · 5:20 PM start, faded"],["Sep 6 · 16","582","578","9:38 avg · HR 152 · negative split"],["Sep 11 · 17","488","481","8:05 avg · HR 167 · marathon effort all day"],["Sep 25 · 18","489","509","8:15 avg · HR 156 · out too fast, faded"]]},{"id":"fig-hr","kind":"hr_dots","title":"Every watch-recorded run since July: average heart rate","sub":"The line is 158, the easy cap. Dots above it on non-long-run days are the habit to break. Big dots are long runs.","t0":"2026-07-01","t1":"2026-10-04","cap":158,"lo":120,"hi":195,"ticks":[130,140,150,158,170,180,190],"months":[["2026-07-01","Jul"],["2026-08-01","Aug"],["2026-09-01","Sep"],["2026-10-01","Oct"]],"data":[["2026-07-01",66,145],["2026-07-05",85,122],["2026-07-15",84,163],["2026-07-16",25,159],["2026-07-19",46,162],["2026-08-02",92,152],["2026-08-03",22,161],["2026-08-10",28,154],["2026-08-11",21,166],["2026-08-16",126,151],["2026-08-21",50,161],["2026-08-23",23,168],["2026-08-24",42,146],["2026-08-30",118,164],["2026-09-02",51,164],["2026-09-03",36,158],["2026-09-04",58,153],["2026-09-06",155,152],["2026-09-08",50,155],["2026-09-09",51,166],["2026-09-11",138,165],["2026-09-14",24,131],["2026-09-23",55,147],["2026-09-25",150,155],["2026-10-02",116,166]]}]},"rules":{"title":"The rules","items":[{"strong":"Heart rate governs, pace follows.","text":"Easy runs at or under 158, aiming 145–155. If the watch says 160, slow down — even if it feels slow. Sep 23 (6 miles at 147) is what easy looks like."},{"strong":"Long runs outside, in the morning.","text":"The race starts at 7 AM outdoors. Both long runs that went wrong started late in the day. First half under 158, finish under 165, second half faster than the first."},{"strong":"No fast miles on easy days.","text":"The 6:25 on Sep 9 cost you the 17 two days later. Speed happens in one session a week, written in Final Surge, nowhere else."},{"strong":"The ankle gets a number after every run.","text":"0–10 in Final Surge under Pain & Injury. Pain during a run or the next morning: easy day off. Two in a row: we get it looked at. Telling me early is the strong move."},{"strong":"Every long run practices race day.","text":"GU gel every 30 minutes from minute 30, water with each. Race shoes on the 20. Nothing new on Nov 22."},{"strong":"Eat enough.","text":"At this mileage, while growing, the risk is under-fueling, not over-eating. Breakfast before every morning run. Fuel on every run over 75 minutes."},{"strong":"One plan.","text":"Final Surge is the calendar. Apple Watch records every run. The Cirqa is for sleep and recovery only."}]},"zones":{"title":"Heart rate zones","intro":"<p>Provisional, built on a max of about 205 — your June 4-mile race averaged 192 and the watch has peaked at 205–210. These are wrist readings, fine for governing training; a chest strap would confirm them. Set your watch alerts to these.<\/p>","cards":[{"cls":"easy","k":"Easy","v":"≤158","s":"aim 145–155 · most of your week"},{"cls":"easy","k":"Long run","v":"≤158","s":"first half · finish ≤165"},{"cls":"mp","k":"Marathon effort","v":"165–175","s":"race day through mile 20"},{"cls":"thr","k":"Threshold","v":"180–190","s":"tempo sessions only"},{"cls":"","k":"Mile 20 decision","v":"&lt;168","s":"under 168 at 20 → open it up"}]},"calendar":{"title":"This week","toc":"This week","intro":"The daily workouts live in Final Surge; this is the same week with the heart-rate cap attached to each day.","weeks":[{"title":"Week of Oct 5 — ~32 mi · long run 10 · XC 5K Sunday","tot":"~32 mi","rows":[{"date":"2026-10-05","day":"Mon 10/5","run":"5 mi <span class=\"pill p-easy\">easy<\/span>","hr":"≤158","notes":"Treadmill fine. Ankle 0–10 after."},{"date":"2026-10-06","day":"Tue 10/6","run":"XC practice + 3 mi <span class=\"pill p-easy\">easy<\/span>","hr":"≤158 on the 3","notes":"Don't race the warm-up."},{"date":"2026-10-07","day":"Wed 10/7","run":"6 mi <span class=\"pill p-easy\">easy<\/span>","hr":"≤158","notes":""},{"date":"2026-10-08","day":"Thu 10/8","run":"<span class=\"pill p-off\">off<\/span>","hr":"","notes":"Dynamic stretch + calf/ankle routine."},{"date":"2026-10-09","day":"Fri 10/9","run":"10 mi long <span class=\"pill p-easy\">easy<\/span>","hr":"≤158 · finish ≤165","notes":"Outside, morning. GU at 30 and 60 min. Second half faster.","key":true},{"date":"2026-10-10","day":"Sat 10/10","run":"<span class=\"pill p-off\">off<\/span> · happy birthday","hr":"","notes":"Cirqa: pair to Garmin Connect only."},{"date":"2026-10-11","day":"Sun 10/11","run":"XC meet · <span class=\"pill p-thr\">5K race<\/span>","hr":"open","notes":"1.5 warm-up, 1.5 cool-down. This is the time trial."}]}],"outro":"Why 10 and not 16: you ran 14 at 166 three days before this week started, on a sore ankle, and you're racing Sunday. Fitness isn't the limiter this week."},"road":{"title":"The road to Nov 22","toc":"Road to Nov 22","figure":{"id":"fig-long","kind":"longrun","pad":5,"round_labels":true,"taper_at":9.5,"title":"Long-run progression","sub":"Filled bars are done. Outlined bars are planned and move if the ankle says so. The 20 on Nov 1 is the full dress rehearsal: 7 AM, race shoes, gels every 30 minutes.","data":[["8/16",14,"done"],["8/30",14,"done"],["9/6",16,"done"],["9/11",17,"done"],["9/25",18,"done"],["10/2",14,"done"],["10/9",10,"plan"],["10/18",16,"prov"],["10/25",12,"pullprov"],["11/1",20,"prov"],["11/8",13,"prov"],["11/15",8,"prov"],["11/22",26.2,"race"]]},"bullets":["Weekly miles: ~32 → ~34 → ~26 (pull-back) → ~36 → ~28 → ~20 → race week. No week over 36. The long run is already big enough; the extra fitness comes from the easy days.","Long runs 10 → 16 → 12 → 20 → 13 → 8. Sundays, outside, morning starts. You've already done 18, so the only new distance is the 20 — once.","Every third week is lighter on purpose. Those weeks are where the training turns into fitness.","One quality session a week, written in Final Surge. The XC meet on Oct 11 counts as that week's session.","Last three weeks: visualization work for the last 10K, and the race-morning routine rehearsed twice."]},"reviews":{"title":"Run reviews","intro":"<p>Newest first. Each one is a heart-rate read of a run that mattered.<\/p>","entries":[{"date":"Oct 2","title":"14 mi · 8:17 at 166 avg","nums":"1:56 moving · 2:33 elapsed · max 185","pill":{"cls":"p-flag","text":"too hard"},"html":"<p>Miles 5–7 at 175–180 after the first stop, and the finish near 180. That's a marathon-effort run, a week after the 18, with the ankle sore. Not your fault — nobody had given you a different plan yet. From here the long-run cap is 158.<\/p>"},{"date":"Sep 25","title":"18 mi · 8:15 at 156 avg","nums":"2:29 moving · 25 min stopped · 8:09 → 8:29","pill":{"cls":"p-warn","text":"faded"},"html":"<p>Heart rate was right (156 avg, top of easy). Miles 2–3 at 7:40–7:50 and 166–168 were the problem: you spent the back half paying for them. Pace slowed while heart rate <em>dropped<\/em> to 154, which means the legs and the fuel ran out, not the engine. Gels every 30 minutes fix most of that.<\/p>"},{"date":"Sep 11","title":"17 mi · 8:05 at 167 avg","nums":"2:18 moving · 53 min stopped · 10:20 AM start","pill":{"cls":"p-flag","text":"marathon effort"},"html":"<p>Every mile from 2 onward at 160–176. This was a marathon-pace run, not a long run. Fast, impressive, and the wrong workout. Also 53 minutes of stops — a run with that many breaks isn't rehearsing the race.<\/p>"},{"date":"Sep 6","title":"16 mi · 9:38 at 152 avg","nums":"2:35 moving · 9:42 → 9:38 · 7:43 AM start","pill":{"cls":"p-good","text":"the template"},"html":"<p>Early start, heart rate flat at 150–155 for 16 miles, second half faster. This is what every long run should look like. The pace will take care of itself — compare Aug 16 (8:56 at 152) to this one and you can see the fitness arriving.<\/p>"}]},"race":{"title":"Race plan · Philadelphia, Nov 22 (v1 — draft)","intro":"<p>Draft, built from your heart-rate zones and a 3:20–3:25 target. The paces get set properly after the Oct 11 5K and the 20-miler on Nov 1. The structure won't change: patient through the hills, steady on Kelly Drive, decide at mile 20.<\/p>","rows":[{"miles":"1–6","section":"Center City, flat","pace":"7:50–8:00","hr":"≤165","notes":"Nothing under 7:45. If it feels too easy, it's right."},{"miles":"7–10","section":"University City + Fairmount Park hills","pace":"by HR","hr":"≤168","notes":"The only real climbs on the course. Hold the heart rate, let the pace go."},{"miles":"11–13","section":"Down to the Art Museum","pace":"7:45","hr":"≤168","notes":"Half in ~1:42–1:44. Gel every 30 min, water every station."},{"miles":"14–20","section":"Kelly Drive out to Manayunk","pace":"7:40–7:45","hr":"165–172","notes":"Flat, then a rise into Manayunk. Don't surge for the crowd."},{"miles":"21–26.2","section":"Back down Kelly Drive","pace":"7:35 →","hr":"open","notes":"Decision at 20: HR under 168 → go. Small hill in the last 500 ft; it's shorter than it looks."}],"fixed_title":"Fixed, whatever the weather","fixed":["Carry your own gels (6). The course gels aren't kosher-certified.","First 10K is the slowest 10K of the day.","Mile 20 is the decision, not mile 13."]},"fueling":{"title":"Fueling · v1","toc":"Fueling","html":"<p><strong>Gels:<\/strong> GU Energy Gel (kosher-marked), one every 30 minutes starting at minute 30, with a few sips of water each. That's about 45 g of carbs an hour. Practice it on every long run, starting with Friday's 10.<\/p><p><strong>Race day:<\/strong> carry 6 gels (belt or shorts with pockets). Philly serves water and DryWater lemon-lime at every station — water is enough with the gels. The course gels (e-Gel) aren't kosher-certified; don't plan on them.<\/p><p><strong>Before morning runs:<\/strong> eat something. Toast, a banana, cereal — an hour before is ideal, but anything beats nothing.<\/p><p><strong>Every day:<\/strong> at this mileage, while growing, you need more food than you think. Three meals plus snacks, protein at each. If you're hungry, eat.<\/p>"},"open":{"title":"Open items","items":["<strong>Ankle:<\/strong> right or left? (You said both.) Which part, and how long has it come and gone? Did the pediatrician know about it?","<strong>Oct 11 5K:<\/strong> the time sets the race paces.","<strong>Stops on long runs:<\/strong> 53 minutes on the 17, 25 on the 18. What were they? Race day has none.","<strong>Runna:<\/strong> off?","<strong>Spring track?<\/strong> Affects the May plan.","<strong>Dynamic warm-up routine:<\/strong> Jorge to send."]},"changelog":{"title":"Changelog","items":[{"date":"Oct 5","html":"Page created after the intro call. Zones, rules, week 1, long-run plan, draft race plan, fueling v1. Reviews of the Sep 6, Sep 11, Sep 25 and Oct 2 long runs from Apple Watch heart rate."}]}},"footer":"Source files (Strava archive, Apple Health export, Final Surge, training log) live in the Lane 8 folder. This page is the shared view; it's rewritten from those files, not the other way around. Course elevation is approximate, traced from findmymarathon.com and the course map; for pacing context only."}</script>
+<script>/* Lane 8 Track Club · athlete page renderer
+   Reads the JSON in <script id="page-data"> and builds the whole page.
+   Athlete-specific content lives ONLY in page.json. Change this file to change every athlete's page. */
+(function(){
+const P=JSON.parse(document.getElementById('page-data').textContent);
+const $=(s,r=document)=>r.querySelector(s);
+const NS='http://www.w3.org/2000/svg';
+const el=(t,a={},p)=>{const e=document.createElementNS(NS,t);for(const k in a)if(a[k]!==undefined)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;};
+const txt=(p,a,s)=>{const t=el('text',a,p);t.textContent=s;return t;};
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const mmss=s=>{s=Math.round(s);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const j=(a,f)=>(a||[]).map(f).join('');
+const pill=(cls,t)=>t?`<span class="pill ${cls}">${t}</span>`:'';
+const R=P.race||{};const DIST=R.distance||26.2;
+
+/* ================= MARKUP ================= */
+const S=P.sections||{};
+const sec=(id)=>S[id]||{};
+const order=P.section_order||['status','data','prediction','rules','zones','calendar','road','reviews','race','open','changelog'];
+const present=order.filter(id=>S[id]);
+
+function figMarkup(f){
+  const body=f.kind==='zonebars'?`<div class="zbars" id="${f.id}-bars"></div>`:`<svg viewBox="0 0 ${f.w||760} ${f.h||FIG_H[f.kind]||240}"></svg>`;
+  return `<div class="fig" id="${f.id}"><p class="ft">${f.title||''}</p>${f.sub?`<p class="fs">${f.sub}</p>`:''}${body}${legendMarkup(f)}</div>`;
+}
+const FIG_H={halves:250,monthly_hr:230,start_split:250,hr_dots:240,weekly_minutes:220,sleep_recovery:240,longrun:230};
+function legendMarkup(f){
+  const L=f.legend===undefined?DEFAULT_LEGEND[f.kind]&&DEFAULT_LEGEND[f.kind](f):f.legend;
+  if(!L||!L.length)return '';
+  return `<div class="legend">${L.map(i=>{
+    if(i.cls)return `<span><i class="${i.cls}"></i>${i.label}</span>`;
+    if(i.dash)return `<span><i style="background:transparent;border-top:2px dashed var(--ink-3);height:0;vertical-align:3px"></i>${i.label}</span>`;
+    return `<span><i style="background:var(${i.color})"></i>${i.label}</span>`;}).join('')}</div>`;
+}
+const DEFAULT_LEGEND={
+  halves:()=>[{color:'--z-easy',label:'First half'},{color:'--accent',label:'Second half'}],
+  monthly_hr:f=>{const c=f.cap||155;return[{color:'--z-easy',label:`Month at or under ${c}`},{color:'--accent',label:`Over ${c}`},{dash:1,label:`Easy cap ${c}`}]},
+  start_split:()=>[{color:'--z-easy',label:'Negative split'},{color:'--accent',label:'Positive split'}],
+  zonebars:()=>[1,2,3,4,5].map(z=>({cls:'z'+z,label:'Z'+z})),
+  hr_dots:f=>{const c=f.cap||150;return[{color:'--z-easy',label:`At or under ${c}`},{color:'--bad',label:`Over ${c}`},{dash:1,label:`Easy cap ${c}`}]},
+  weekly_minutes:()=>null,
+  sleep_recovery:()=>[{color:'--good',label:'Green (67+)'},{color:'--warn',label:'Yellow (34–66)'},{color:'--bad',label:'Red (&lt;34)'}],
+  longrun:()=>[{color:'--z-easy',label:'Done'},{cls:'o',label:'Planned'},{color:'--warn',label:'Pull-back week'}]
+};
+
+const SECTION={
+  status:s=>s.html||'',
+  data:s=>(s.intro||'')+j(s.figures,figMarkup),
+  prediction:s=>(s.intro||'')
+    +(s.cards?`<div class="zones">${j(s.cards,c=>`<div class="zone ${c.cls||''}"><div class="k">${c.k}</div><div class="v">${c.v}</div><div class="s">${c.s||''}</div></div>`)}</div>`:'')
+    +(s.center_s?`<div class="fig" id="pred-band"><p class="ft">${s.band_title||'Where the estimate lands'}</p><svg viewBox="0 0 760 132"></svg></div>`:'')
+    +(s.basis?`<ul class="plain">${j(s.basis,b=>`<li>${b}</li>`)}</ul>`:'')
+    +(s.outro?`<p style="margin-top:12px;font-size:14px;color:var(--ink-2)">${s.outro}</p>`:''),
+  rules:s=>j(s.items,r=>`<div class="rule"><strong>${r.strong}</strong> ${r.text}</div>`),
+  zones:s=>(s.intro||'')+`<div class="zones">${j(s.cards,c=>`<div class="zone ${c.cls||''}"><div class="k">${c.k}</div><div class="v">${c.v}</div><div class="s">${c.s||''}</div></div>`)}</div>`,
+  calendar:s=>{
+    const legend=`Legend: ${pill('p-easy','easy')} ${pill('p-mp','marathon effort')} ${pill('p-thr','threshold')} ${pill('p-off','off')}`;
+    const intro=s.intro?`<p>${s.intro} ${legend}</p>`:`<p>${legend}</p>`;
+    const weeks=j(s.weeks,w=>`<div class="wk"><h3>${w.title}</h3><span class="tot">${w.tot||''}</span></div>
+  <div class="tbl"><table><thead><tr><th>Day</th><th>Run</th><th>HR</th><th>Notes</th><th>Done</th></tr></thead><tbody>${j(w.rows,r=>{
+      const cls=[r.key?'key':'',(w.pull||r.pull)?'pull':''].filter(Boolean).join(' ');
+      const done=r.done===true?pill('p-good','done'):r.done===false?pill('p-flag','missed'):(r.done||'');
+      return `<tr${cls?` class="${cls}"`:''}${r.date?` data-date="${r.date}"`:''}><td class="day">${r.day}</td><td>${r.run||''}</td><td class="num">${r.hr||''}</td><td>${r.notes||''}</td><td>${done}</td></tr>`;})}</tbody></table></div>`);
+    const outro=s.outro?`<p style="margin-top:12px;font-size:14px;color:var(--ink-2)">${s.outro}</p>`:'';
+    return intro+weeks+outro;},
+  road:s=>(s.figure?figMarkup(s.figure):'')+(s.bullets?`<ul class="plain">${j(s.bullets,b=>`<li>${b}</li>`)}</ul>`:''),
+  reviews:s=>(s.intro||'')+`<div class="card">${j(s.entries,e=>`<div class="entry"><div class="head"><span class="date">${e.date}</span><span class="title">${e.title||''}</span>${e.nums?`<span class="nums">${e.nums}</span>`:''}${e.pill?pill(e.pill.cls,e.pill.text):''}</div>${e.html||''}</div>`)}</div>`,
+  race:s=>(s.intro||'')+(s.rows?`<div class="tbl"><table><thead><tr><th>Miles</th><th>Section</th><th class="num">Pace</th><th class="num">HR</th><th>Notes</th></tr></thead><tbody>${j(s.rows,r=>`<tr><td class="num">${r.miles}</td><td>${r.section}</td><td class="num">${r.pace}</td><td class="num">${r.hr}</td><td>${r.notes||''}</td></tr>`)}</tbody></table></div>`:'')
+    +(s.fixed?`<h3>${s.fixed_title||'Race-day fixed points'}</h3><ul class="plain">${j(s.fixed,b=>`<li>${b}</li>`)}</ul>`:''),
+  open:s=>`<ul class="plain open">${j(s.items,i=>`<li>${i}</li>`)}</ul>`,
+  changelog:s=>`<ul class="plain log">${j(s.items,i=>`<li><strong>${i.date}</strong> — ${i.html}</li>`)}</ul>`
+};
+const DEFAULT_TITLE={status:'Where we are',data:'What the data says',prediction:'The prediction',rules:'The rules',zones:'Heart rate zones',calendar:'Calendar',road:'The road',reviews:'Run reviews',race:'Race plan',open:'Open items',changelog:'Changelog'};
+const DEFAULT_TOC={zones:'HR zones',prediction:'Prediction',race:'Race plan'};
+
+document.title=`${P.athlete} · ${R.short||R.name||''}`.trim();
+$('#app').innerHTML=`
+<div class="topbar"><span class="eight">8</span> ${P.club||'Lane 8 Track Club'} <span style="opacity:.55;font-weight:600">· Athlete page</span></div>
+<header class="hero"><div class="hero-in">
+  <div class="eyebrow">Shared working document · Updated ${P.updated||''}</div>
+  <div class="hero-top" style="margin-top:10px">
+    <h1>${P.athlete}<span>${R.name||''}</span></h1>
+    <div class="count" id="count" aria-label="Countdown to race day"><div><b id="c-days">—</b><small>days</small></div><div><b id="c-hrs">—</b><small>hours</small></div><div><b id="c-min">—</b><small>min</small></div></div>
+  </div>
+  ${P.lede?`<p class="lede">${P.lede}</p>`:''}
+  ${P.course?`<div class="course" id="course"><svg viewBox="0 0 1000 220" preserveAspectRatio="none" aria-label="${esc(P.course.aria||(R.name+' course profile with race plan segments'))}"></svg><div class="cap">${P.course.caption||''}</div><div class="tip" id="ctip"></div></div>`:''}
+</div></header>
+<div class="wrap">
+  ${P.stats?`<div class="strip">${j(P.stats,s=>`<div class="stat"><div class="k">${s.k}</div><div class="v"${s.v_style?` style="${s.v_style}"`:''}>${s.v}</div><div class="s">${s.s||''}</div></div>`)}</div>`:''}
+  <nav class="toc">${present.map(id=>`<a href="#${id}">${sec(id).toc||DEFAULT_TOC[id]||sec(id).title||DEFAULT_TITLE[id]}</a>`).join('')}</nav>
+  ${present.map(id=>`<section id="${id}"><h2>${sec(id).title||DEFAULT_TITLE[id]}</h2>${SECTION[id]?SECTION[id](sec(id)):(sec(id).html||'')}</section>`).join('')}
+  ${P.footer?`<footer>${P.footer}</footer>`:''}
+</div>`;
+
+/* ================= BEHAVIOUR ================= */
+/* countdown */
+if(R.start_iso){const race=new Date(R.start_iso);
+  const tick=()=>{const d=Math.max(0,race-Date.now());$('#c-days').textContent=Math.floor(d/864e5);$('#c-hrs').textContent=String(Math.floor(d%864e5/36e5)).padStart(2,'0');$('#c-min').textContent=String(Math.floor(d%36e5/6e4)).padStart(2,'0');};
+  tick();setInterval(tick,30000);}
+/* today marker */
+try{const t=new Date();const iso=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');const row=document.querySelector(`tr[data-date="${iso}"]`);if(row)row.classList.add('today');}catch(e){}
+
+/* course profile */
+if(P.course&&P.course.elev){const C=P.course,ELEV=C.elev,SEG=C.segments||[];
+  const svg=$('#course svg'),W=1000,H=220,padB=34,padT=40,maxFt=C.max_ft||190;
+  const x=m=>m/DIST*W,y=f=>H-padB-(f/maxFt)*(H-padB-padT);
+  const bands=el('g',{},svg);
+  SEG.forEach((s,i)=>el('rect',{x:x(s.a),y:0,width:x(s.b)-x(s.a),height:H,fill:i%2?'#FFFFFF':'#000000',opacity:i%2?.035:.12},bands));
+  let d='M'+x(0)+','+(H-padB);ELEV.forEach(p=>d+=' L'+x(p[0]).toFixed(1)+','+y(p[1]).toFixed(1));d+=' L'+x(DIST)+','+(H-padB)+' Z';
+  el('path',{d,fill:'#FFE600',opacity:.22},svg);
+  let l='';ELEV.forEach((p,i)=>l+=(i?' L':'M')+x(p[0]).toFixed(1)+','+y(p[1]).toFixed(1));
+  el('path',{d:l,fill:'none',stroke:'#FFE600','stroke-width':2.2,'stroke-linejoin':'round'},svg);
+  for(let m=0;m<=Math.floor(DIST);m+=2){el('line',{x1:x(m),x2:x(m),y1:H-padB,y2:H-padB+5,stroke:'#8C8B83','stroke-width':1},svg);txt(svg,{x:x(m),y:H-padB+17,'text-anchor':'middle',fill:'#8C8B83','font-size':'10','font-family':'IBM Plex Mono, monospace'},m);}
+  let lmPrev=-99,lmRow=0;
+  [...(C.landmarks||[])].sort((a,b)=>a[0]-b[0]).forEach(([m,n])=>{lmRow=(m-lmPrev<1.8)?1-lmRow:0;lmPrev=m;
+    txt(svg,{x:x(m),y:padT-14+lmRow*12,'text-anchor':m>DIST-1.2?'end':m<1?'start':'middle',fill:'#D8D7CF','font-size':'10.5','letter-spacing':'.06em','font-family':'IBM Plex Mono, monospace'},n.toUpperCase());
+    el('line',{x1:x(m),x2:x(m),y1:padT-10,y2:H-padB,stroke:'#D8D7CF','stroke-width':1,opacity:.25,'stroke-dasharray':'2 4'},svg);});
+  if(C.decision){const dm=C.decision.mile,df=C.decision.ft!==undefined?C.decision.ft:(ELEV.find(p=>p[0]>=dm)||[0,0])[1];
+    el('circle',{cx:x(dm),cy:y(df),r:5,fill:'#141412',stroke:'#FFE600','stroke-width':2.5},svg);
+    txt(svg,{x:x(dm)+9,y:y(df)-8,fill:'#F3F5F4','font-size':'11','font-family':'Barlow, sans-serif'},C.decision.label||('Decision: mile '+dm));}
+  const tip=$('#ctip'),box=$('#course');const hot=el('rect',{x:0,y:0,width:W,height:H,fill:'transparent'},svg);let cur=-1;
+  hot.addEventListener('mousemove',ev=>{const r=svg.getBoundingClientRect();const mi=(ev.clientX-r.left)/r.width*DIST;const i=SEG.findIndex(s=>mi>=s.a&&mi<s.b);if(i<0)return;
+    if(i!==cur){cur=i;[...bands.children].forEach((b,k)=>b.setAttribute('opacity',k===i?(k%2?.14:.3):(k%2?.035:.12)));const s=SEG[i];
+      tip.innerHTML=`<b>${s.name}</b>${s.pace}/mi · HR ${s.hr}<br><span style="white-space:normal;display:block;max-width:220px;color:#4A4944">${s.note||''}</span>`;}
+    const br=box.getBoundingClientRect();tip.style.left=(ev.clientX-br.left)+'px';tip.style.top=(ev.clientY-br.top-10)+'px';tip.classList.add('on');});
+  hot.addEventListener('mouseleave',()=>{tip.classList.remove('on');cur=-1;[...bands.children].forEach((b,k)=>b.setAttribute('opacity',k%2?.035:.12));});
+}
+
+/* shared tooltip */
+function mkTip(fig){const t=document.createElement('div');t.className='tip light';fig.appendChild(t);return{
+  show(ev,html){t.innerHTML=html;const r=fig.getBoundingClientRect();t.style.left=(ev.clientX-r.left)+'px';t.style.top=(ev.clientY-r.top-8)+'px';t.classList.add('on');},
+  hide(){t.classList.remove('on');}};}
+const hover=(node,tip,html)=>{node.addEventListener('mousemove',ev=>tip.show(ev,html));node.addEventListener('mouseleave',tip.hide);};
+/* generic annotations: [{x,y,text,anchor,dx,dy}] in data coords */
+const annots=(svg,list,x,y)=>(list||[]).forEach(a=>txt(svg,{x:x(a.x)+(a.dx||0),y:y(a.y)+(a.dy===undefined?4:a.dy),'text-anchor':a.anchor||'start',class:'ann'},a.text));
+const gridY=(svg,vals,x1,x2,y,fmt=v=>v,L)=>{const g=el('g',{class:'grid'},svg);vals.forEach(v=>{el('line',{x1,x2,y1:y(v),y2:y(v)},g);txt(svg,{x:L-8,y:y(v)+4,'text-anchor':'end'},fmt(v));});return g;};
+
+/* ================= FIGURE KINDS ================= */
+const KINDS={
+  /* first half vs second half per race: data [[name, secPerMiFirst, secPerMiSecond, note]] */
+  halves(f,svg,tip){const D=f.data,W=760,H=250,L=46,Rr=12,T=16,B=44,pw=W-L-Rr,ph=H-T-B;
+    const lo=f.lo||420,hi=f.hi||720,y=v=>T+ph*(1-(v-lo)/(hi-lo));gridY(svg,f.ticks||[450,510,570,630,690],L,W-Rr,y,mmss,L);
+    const gw=pw/D.length,bw=Math.min(30,gw*.3);
+    D.forEach((r,i)=>{const cx=L+gw*i+gw/2;
+      [[r[1],css('--z-easy'),-bw-1,'First half'],[r[2],css('--accent'),1,'Second half']].forEach(b=>{
+        const rect=el('rect',{x:cx+b[2],y:y(b[0]),width:bw,height:y(lo)-y(b[0]),rx:3,fill:b[1]},svg);hover(rect,tip,`<b>${r[0]} · ${b[3]}</b>${mmss(b[0])}/mi · ${r[3]||''}`);
+        txt(svg,{x:cx+b[2]+bw/2,y:y(b[0])-5,'text-anchor':'middle'},mmss(b[0]));});
+      txt(svg,{x:cx,y:H-B+16,'text-anchor':'middle',class:'ann'},r[0]);txt(svg,{x:cx,y:H-B+30,'text-anchor':'middle'},(r[3]||'').split(' · ')[0]);});
+    el('line',{x1:L,x2:W-Rr,y1:y(lo),y2:y(lo),stroke:css('--line')},svg);},
+
+  /* median easy-run HR by month: data [[label, median, pctOver]] */
+  monthly_hr(f,svg,tip){const D=f.data,W=760,H=230,L=46,Rr=12,T=16,B=34,pw=W-L-Rr,ph=H-T-B,cap=f.cap||155;
+    const lo=f.lo||148,hi=f.hi||164,y=v=>T+ph*(1-(v-lo)/(hi-lo));gridY(svg,f.ticks||[150,155,160],L,W-Rr,y,v=>v,L);
+    const gw=pw/D.length,bw=Math.min(34,gw*.6);
+    D.forEach((m,i)=>{const cx=L+gw*i+gw/2,over=m[1]>cap;const rect=el('rect',{x:cx-bw/2,y:y(m[1]),width:bw,height:y(lo)-y(m[1]),rx:3,fill:over?css('--accent'):css('--z-easy')},svg);
+      hover(rect,tip,`<b>${m[0]}</b>median ${m[1]} bpm · ${m[2]}% ${f.pct_label||'of easy miles over cap'}`);txt(svg,{x:cx,y:y(m[1])-6,'text-anchor':'middle'},m[2]+'%');txt(svg,{x:cx,y:H-B+16,'text-anchor':'middle'},m[0]);});
+    el('line',{x1:L,x2:W-Rr,y1:y(cap),y2:y(cap),stroke:css('--ink-3'),'stroke-dasharray':'4 4','stroke-width':1.5},svg);el('line',{x1:L,x2:W-Rr,y1:y(lo),y2:y(lo),stroke:css('--line')},svg);},
+
+  /* long-run start time vs second-half delta: data [[date, startHourDecimal, firstMilesHR, secPerMiDelta]] */
+  start_split(f,svg,tip){const D=f.data,W=760,H=250,L=46,Rr=12,T=18,B=36,pw=W-L-Rr,ph=H-T-B;
+    const xmin=f.xmin||5,xmax=f.xmax||16.5,ymn=f.ymin||-80,ymx=f.ymax||60,rs=f.race_start_hour||8;
+    const x=h=>L+pw*(h-xmin)/(xmax-xmin),y=v=>T+ph*(1-(v-ymn)/(ymx-ymn));const g=el('g',{class:'grid'},svg);
+    (f.ticks||[-60,-30,0,30,60]).forEach(v=>{el('line',{x1:L,x2:W-Rr,y1:y(v),y2:y(v),stroke:v===0?css('--ink-3'):undefined},v===0?svg:g);txt(svg,{x:L-8,y:y(v)+4,'text-anchor':'end'},(v>0?'+':'')+v+' s');});
+    for(let h=Math.ceil(xmin/2)*2;h<=xmax;h+=2)txt(svg,{x:x(h),y:H-B+16,'text-anchor':'middle'},h>12?(h-12)+' PM':h+' AM');
+    el('line',{x1:x(rs),x2:x(rs),y1:T,y2:y(ymn),stroke:css('--ink'),'stroke-dasharray':'4 4'},svg);txt(svg,{x:x(rs)+6,y:T+10,class:'ann'},(rs>12?rs-12+' PM':rs+' AM')+' — race start');
+    txt(svg,{x:W-Rr,y:y(ymn)-8,'text-anchor':'end'},'below the line = faster second half');
+    D.forEach(r=>{const c=el('circle',{cx:x(r[1]),cy:y(r[3]),r:6.5,fill:r[3]<0?css('--z-easy'):css('--accent'),stroke:css('--surface'),'stroke-width':2},svg);
+      hover(c,tip,`<b>${r[0]}</b>start ${Math.floor(r[1])}:${String(Math.round((r[1]%1)*60)).padStart(2,'0')} · first 3 mi HR ${r[2]} · 2nd half ${r[3]>0?'+':''}${r[3]} s/mi`);});
+    annots(svg,f.annotations,x,y);},
+
+  /* time-in-zone bars: data [[dateLabel, runName, [z1..z5 pct], tag]] */
+  zonebars(f,box){const D=f.data;D.forEach(([d,n,z])=>{
+    const lab=document.createElement('div');lab.className='lab';lab.innerHTML=`${n}<small>${d}</small>`;
+    const bar=document.createElement('div');bar.className='bar';z.forEach((v,i)=>{if(v>0){const s=document.createElement('i');s.className='z'+(i+1);s.style.flex=v;s.title=`Z${i+1} ${v}%`;bar.appendChild(s);}});
+    const pct=document.createElement('div');pct.className='pct';const easy=z[0]+z[1];pct.textContent=easy+'% Z1–2';pct.style.color=easy>=(f.good||80)?css('--good'):easy>=(f.warn||60)?css('--warn'):css('--bad');
+    box.append(lab,bar,pct);});},
+
+  /* average HR per run over time: data [[isoDate, minutes, avgHR]] */
+  hr_dots(f,svg,tip){const D=f.data,W=760,H=240,L=40,Rr=12,T=14,B=30,cap=f.cap||150,lo=f.lo||120,hi=f.hi||165;
+    const t0=Date.parse(f.t0),t1=Date.parse(f.t1);const x=d=>L+(Date.parse(d)-t0)/(t1-t0)*(W-L-Rr),y=v=>T+(1-(v-lo)/(hi-lo))*(H-T-B);
+    gridY(svg,f.ticks||[120,130,140,150,160],L,W-Rr,y,v=>v,L);
+    (f.months||[]).forEach(([d,n])=>txt(svg,{x:x(d),y:H-8,'text-anchor':'start'},n));
+    el('line',{x1:L,x2:W-Rr,y1:y(cap),y2:y(cap),stroke:css('--ink-3'),'stroke-width':1.5,'stroke-dasharray':'4 4'},svg);txt(svg,{x:W-Rr,y:y(cap)-6,'text-anchor':'end',class:'ann'},'easy cap '+cap);
+    D.forEach(([d,m,hr])=>{const over=hr>cap,r=Math.max(4,Math.min(11,Math.sqrt(m)*0.9));const dot=el('circle',{cx:x(d),cy:y(hr),r,fill:over?css('--bad'):css('--z-easy'),stroke:css('--surface'),'stroke-width':2,opacity:.92},svg);hover(dot,tip,`<b>${d}</b>${hr} avg · ${m} min`);});
+    annots(svg,f.annotations,x,y);},
+
+  /* minutes per week: data [[weekLabel, minutes]]; month_marks [[index,label]] */
+  weekly_minutes(f,svg,tip){const D=f.data,W=760,H=220,L=40,Rr=12,T=14,B=30,n=D.length,bw=(W-L-Rr)/n,max=f.max||340;
+    const y=v=>T+(1-v/max)*(H-T-B),x=i=>L+i*bw;gridY(svg,f.ticks||[100,200,300],L,W-Rr,y,v=>v,L);
+    D.forEach(([w,v],i)=>{const x0=x(i)+1,h=Math.max(0,y(0)-y(v)),last=f.last_in_progress!==false&&i===n-1;
+      const rect=el('rect',{x:x0,y:y(v),width:bw-2,height:h,rx:3,fill:last?css('--z-easy-soft'):css('--z-easy'),stroke:last?css('--z-easy'):'none','stroke-dasharray':last?'3 2':'none'},svg);
+      if(h>0)el('rect',{x:x0,y:y(0)-2,width:bw-2,height:2,fill:last?css('--z-easy-soft'):css('--z-easy')},svg);hover(rect,tip,`<b>week of ${w}</b>${v} min${last?' · in progress':''}`);});
+    (f.month_marks||[]).forEach(([i,n])=>txt(svg,{x:x(i)+1,y:H-8},n));
+    annots(svg,f.annotations,i=>x(i)+bw/2,y);},
+
+  /* sleep vs recovery: data [[sleepMinutes, recoveryPct, label?]] */
+  sleep_recovery(f,svg,tip,fig){const D=f.data,W=760,H=240,L=40,Rr=12,T=14,B=30,hmin=f.hmin||3.5,hmax=f.hmax||8.5,bad=f.bad_under_h||6;
+    const x=m=>L+(m/60-hmin)/(hmax-hmin)*(W-L-Rr),y=v=>T+(1-v/100)*(H-T-B);gridY(svg,[0,33,66,100],L,W-Rr,y,v=>v+'%',L);
+    for(let h=Math.ceil(hmin);h<=hmax;h++){el('line',{x1:x(h*60),x2:x(h*60),y1:T,y2:H-B,stroke:css('--grid')},svg);txt(svg,{x:x(h*60),y:H-8,'text-anchor':'middle'},h+'h');}
+    el('rect',{x:L,y:T,width:x(bad*60)-L,height:H-T-B,fill:css('--bad'),opacity:.06},svg);txt(svg,{x:x(bad*60)-8,y:T+14,'text-anchor':'end',class:'ann'},'under '+bad+' h');
+    D.forEach(([m,r,label])=>{const col=r>=67?css('--good'):r>=34?css('--warn'):css('--bad');const dot=el('circle',{cx:x(m),cy:y(r),r:label?7:5,fill:col,stroke:label?css('--ink'):css('--surface'),'stroke-width':label?2:1.5,opacity:.9},svg);hover(dot,tip,`<b>${label||'one night'}</b>${(m/60).toFixed(1)} h → ${r}% recovery`);});
+    annots(svg,f.annotations,x,y);},
+
+  /* long-run progression: data [[label, miles, status]] status: done|plan|pull|prov|pullprov|race */
+  longrun(f,svg,tip){const D=f.data,W=760,H=230,L=40,Rr=12,T=16,B=40,n=D.length,bw=(W-L-Rr)/n,pad=f.pad||6,max=f.max||27;
+    const y=v=>T+(1-v/max)*(H-T-B);gridY(svg,f.ticks||[10,20,26.2],L,W-Rr,y,v=>v,L);
+    D.forEach(([d,mi,st],i)=>{const x0=L+i*bw+pad,w=bw-2*pad,h=y(0)-y(mi);const done=st==='done',pull=st.startsWith('pull'),prov=st.includes('prov'),race=st==='race';
+      const fill=done?css('--z-easy'):race?css('--brand'):pull?css('--warn-soft'):'transparent';const stroke=pull?css('--warn'):race?css('--ink'):css('--z-easy');
+      const r=el('rect',{x:x0,y:y(mi),width:w,height:h,rx:3,fill,stroke,'stroke-width':2,'stroke-dasharray':prov?'4 3':'none',opacity:race?.85:1},svg);
+      txt(svg,{x:x0+w/2,y:y(mi)-6,'text-anchor':'middle',class:'ann'},race?String(DIST):(Number.isInteger(mi)?mi:(f.round_labels?Math.round(mi):mi)));
+      txt(svg,{x:x0+w/2,y:H-B+16,'text-anchor':'middle','font-size':n>14?'10':undefined},d);
+      hover(r,tip,`<b>${d}</b>${mi} mi · ${done?'done':race?'race day':pull?'pull-back':prov?'provisional':'planned'}`);});
+    if(f.taper_at!==undefined)txt(svg,{x:L+f.taper_at*bw,y:H-4,'text-anchor':'middle'},'TAPER');}
+};
+
+function renderFig(f){const fig=document.getElementById(f.id);if(!fig||!KINDS[f.kind]){console.warn('unknown figure',f);return;}
+  if(f.kind==='zonebars')return KINDS.zonebars(f,$('#'+f.id+'-bars'));
+  KINDS[f.kind](f,$('svg',fig),mkTip(fig),fig);}
+(sec('data').figures||[]).forEach(renderFig);if(sec('road').figure)renderFig(sec('road').figure);
+/* prediction band bar: times in seconds, smaller = faster = left */
+(function(){const s=sec('prediction');if(!s.center_s)return;const fig=document.getElementById('pred-band');if(!fig)return;
+  const svg=$('svg',fig),tip=mkTip(fig),W=760,L=28,Rr=28,yc=66;
+  const F=t=>{const m=Math.round(t/60);return Math.floor(m/60)+':'+String(m%60).padStart(2,'0');};
+  const vals=[s.band_s[0],s.band_s[1],s.center_s].concat(s.goal_s!==undefined?[s.goal_s]:[]);
+  const lo=Math.min(...vals)-240,hi=Math.max(...vals)+240,x=t=>L+(t-lo)/(hi-lo)*(W-L-Rr);
+  txt(svg,{x:L,y:14,class:'ann'},'\u2190 faster');txt(svg,{x:W-Rr,y:14,'text-anchor':'end',class:'ann'},'slower \u2192');
+  el('line',{x1:L,x2:W-Rr,y1:yc,y2:yc,stroke:css('--line'),'stroke-width':1.5},svg);
+  const b=el('rect',{x:x(s.band_s[0]),y:yc-14,width:x(s.band_s[1])-x(s.band_s[0]),height:28,rx:5,fill:css('--z-easy-soft'),stroke:css('--z-easy'),'stroke-width':1.5},svg);
+  hover(b,tip,`<b>68% band</b>${F(s.band_s[0])}\u2013${F(s.band_s[1])} \u00b7 two of three runners land inside`);
+  txt(svg,{x:x(s.band_s[0]),y:yc+34,'text-anchor':'middle'},F(s.band_s[0]));
+  txt(svg,{x:x(s.band_s[1]),y:yc+34,'text-anchor':'middle'},F(s.band_s[1]));
+  el('line',{x1:x(s.center_s),x2:x(s.center_s),y1:yc-24,y2:yc+24,stroke:css('--ink'),'stroke-width':2.5},svg);
+  txt(svg,{x:x(s.center_s),y:yc-32,'text-anchor':'middle','font-weight':'700','font-size':'13',class:'ann'},F(s.center_s)+' estimate');
+  if(s.goal_s!==undefined){el('line',{x1:x(s.goal_s),x2:x(s.goal_s),y1:yc-24,y2:yc+24,stroke:css('--accent'),'stroke-width':2.5,'stroke-dasharray':'5 3'},svg);
+    txt(svg,{x:x(s.goal_s),y:yc+52,'text-anchor':'middle',class:'ann',style:'fill:var(--accent);font-weight:700'},(s.goal_label||'goal')+' '+F(s.goal_s));}
+})();
+})();
+</script>
